@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bon Voyage · Aromas del Mundo</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles5.css" />
+</head>
+
+<body>
+
+  <!-- Fondo dinámico -->
+  <div id="bg" class="bg-image" style="--bg:url('fondo.jpg')"></div>
+  <div class="bg-overlay"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <img src="logo1.jpg" alt="Bon Voyage" id="logo" class="logo" />
+    </div>
+    <nav class="main-nav">
+      <a href="#inicio" data-nav="inicio" class="activa">Inicio</a>
+      <a href="#quienes" data-nav="quienes">Quiénes Somos</a>
+      <a href="#colecciones" data-nav="colecciones">Colecciones</a>
+      <a href="#ocasiones" data-nav="ocasiones">Ediciones Limitadas</a>
+      <a href="#contacto" data-nav="contacto">Contacto</a>
+      <a href="#carrito" data-nav="carrito" id="iconoCarrito" class="icono-carrito">
+        🛒 <span id="carritoCount">0</span>
+      </a>
+
+    </nav>
+  </header>
+
+  <main>
+    <!-- INICIO -->
+    <section id="inicio" class="pagina activa" data-bg="fondo.jpg">
+      <div class="hero hero-center">
+        <h1>Bon Voyage · Aromas del Mundo</h1>
+        <p>Velas artesanales de cera de soja que transforman cada espacio en un viaje sensorial.<br>
+          Inspiradas en destinos del mundo, creadas a mano con amor.</p>
+        <a class="btn-hero" href="#colecciones" data-nav="colecciones">Descubrí nuestras colecciones</a>
+      </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section id="quienes" class="pagina" data-bg="Images/quienes2.jpg">
+      <div class="container quienes-contenido">
+
+        <div class="quienes-texto">
+          <h2>Quiénes Somos</h2>
+          <p><strong>Aromas Bon Voyage</strong> nació del deseo de transformar los aromas en experiencias. Empezamos en
+            una pequeña cocina donde la mezcla de esencias y la pasión por los viajes se unieron para crear algo más que
+            velas: <em>momentos que te transportan</em>.</p>
+          <p><strong>Un viaje a través de los sentidos ✨</strong><br>Cada vela cuenta una historia. Desde notas dulces
+            que evocan tardes en París hasta toques cítricos que recuerdan la brisa del Mediterráneo, cada aroma está
+            pensado para despertar emociones y recuerdos.</p>
+          <p><strong>Hecho a mano, con amor 💛</strong><br>Elaboramos cada producto de forma artesanal, utilizando cera
+            100% vegetal, fragancias premium y envases sostenibles. Creemos en los detalles que marcan la diferencia y
+            en el poder de los sentidos para conectar con tu historia.</p>
+          <p><strong>Nuestra misión 🌎</strong><br>Acompañarte en cada momento, creando una conexión sensorial entre el
+            presente y tus recuerdos más especiales. Porque no se trata solo de encender una vela… <em>se trata de
+              encender emociones</em>.</p>
+        </div>
+        <div class="proceso-imagenes">
+          <div class="galeria-proceso">
+            <img src="pasos.jpg" alt="Proceso Artesanal de Velas" class="img-proceso-collage">
+          </div>
+          <p></strong>
+          <p class="caption">El proceso artesanal garantiza la calidad y larga duración de cada vela Bon Voyage.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLECCIONES (Nivel 1) -->
+    <section id="colecciones" class="pagina" data-bg="fondo2.jpg">
+      <div class="container">
+        <h2>Colecciones por Continente</h2>
+        <div class="grid-continentes">
+          <div class="card" role="button" tabindex="0" data-goto="oceania"
+            data-bg="Continentes/Oceanía/jeremy-bezanger-4bkD4ASqLLo-unsplash.jpg">
+            <img src="Continentes/Oceanía/jeremy-bezanger-4bkD4ASqLLo-unsplash.jpg" alt="Oceanía">
+            <div class="card-content">
+              <h3>Oceanía</h3>
+              <p>Pureza marina, eucalipto y calma infinita.</p>
+            </div>
+          </div>
+          <div class="card" role="button" tabindex="0" data-goto="america"
+            data-bg="Continentes/América/WhatsApp Image 2021-12-07 at 00.46.19 (1).jpeg">
+            <img src="Continentes/América/WhatsApp Image 2021-12-07 at 00.46.19 (1).jpeg" alt="América">
+            <div class="card-content">
+              <h3>América</h3>
+              <p>Diversa, vibrante y dulce. Energía en cada aroma.</p>
+            </div>
+          </div>
+          <div class="card" role="button" tabindex="0" data-goto="europa" data-bg="Continentes/Europa/europa.jpg">
+            <img src="Continentes/Europa/europa.jpg" alt="Europa">
+            <div class="card-content">
+              <h3>Europa</h3>
+              <p>Elegancia, flores y vainillas mediterráneas.</p>
+            </div>
+          </div>
+          <div class="card" role="button" tabindex="0" data-goto="asia" data-bg="Continentes/Asia/asia.jpg">
+            <img src="Continentes/Asia/asia.jpg" alt="Asia">
+            <div class="card-content">
+              <h3>Asia</h3>
+              <p>Equilibrio, espiritualidad y maderas suaves.</p>
+            </div>
+          </div>
+          <div class="card" role="button" tabindex="0" data-goto="africa" data-bg="Continentes/África/africa.jpg">
+            <img src="Continentes/África/africa.jpg" alt="África">
+            <div class="card-content">
+              <h3>África</h3>
+              <p>Contrastes, calidez y energía vital.</p>
+            </div>
+          </div>
+          <div class="card" role="button" tabindex="0" data-goto="caribe" data-bg="Continentes/Caribe/caribe.jpg">
+            <img src="Continentes/Caribe/caribe.jpg" alt="Caribe">
+            <div class="card-content">
+              <h3>Caribe</h3>
+              <p>Coco, flores y libertad de mar.</p>
+            </div>
+          </div>
+          <div class="card" role="button" tabindex="0" data-goto="oriente" data-bg="Continentes/Oriente/oriente.jpg">
+            <img src="Continentes/Oriente/oriente.jpg" alt="Oriente">
+            <div class="card-content">
+              <h3>Oriente</h3>
+              <p>Especias, miel y maderas exóticas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OCASIONES (Nivel 1 paralelo) -->
+    <section id="ocasiones" class="pagina" data-bg="fondo.jpg">
+      <div class="container">
+        <h2>Ocasiones Especiales</h2>
+        <div class="grid-ocasiones">
+          <div class="card" role="button" tabindex="0" data-goto="navidad" data-bg="Continentes/Navidad/navidad.jpg">
+            <img src="Continentes/Navidad/navidad.jpg" alt="Navidad">
+            <div class="card-content">
+              <h3>🎄 Velas de Navidad</h3>
+              <p>Vainilla, chocolate, almendras, naranja, canela, jengibre y nuez moscada. ¡Disponibles ahora!</p>
+            </div>
+          </div>
+          <div class="card" role="button" tabindex="0" data-goto="verano" data-bg="Images/citro.jpg">
+            <img src="Images/citro.jpg" alt="Verano">
+            <div class="card-content">
+              <h3>☀️ Edición Verano</h3>
+              <p>Citronella, lemongrass y notas tropicales para días luminosos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FICHA DE ESENCIA (Detalle / Nivel 3) -->
+    <section id="fichaEsencia" class="pagina" data-bg="">
+      <div class="section container">
+        <a class="volver" href="#colecciones" data-nav="colecciones">← Volver a colecciones</a>
+        <div class="ficha-producto">
+          <div class="ficha-img-cont">
+            <img id="fichaEsenciaImg" src="" alt="Envase de vela Bon Voyage">
+            <p class="envase-desc" id="envaseDesc"></p>
+          </div>
+          <div class="ficha-detalles">
+            <h2 id="fichaEsenciaNombre"></h2>
+            <p class="desc-corta" id="fichaEsenciaCorta"></p>
+
+            <div class="envase-selector-detail">
+              <label for="envaseSelector">Elegí tu envase:</label>
+              <select id="envaseSelector" class="selector-envase-detail"></select>
+            </div>
+
+            <div class="envase-info-dinamica">
+              <p class="precio-envase">Costo: <span id="envasePrecio">$0.000</span></p>
+              <button id="btnAgregarCarrito" type="button" class="btn btn-primary">Agregar al carrito</button>
+            </div>
+
+            <div class="detalles-ingredientes">
+              <h4>Detalles del aroma:</h4>
+              <ul id="fichaEsenciaDetalles"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OCEANIA (Nivel 2) -->
+    <section id="oceania" class="pagina" data-bg="Continentes/Oceanía/jeremy-bezanger-4bkD4ASqLLo-unsplash.jpg">
+      <header class="hero-cont">
+        <div class="hero-inner">
+          <h1>Oceanía</h1>
+          <p>Pureza marina, eucalipto y calma infinita. Fragancias que evocan la frescura del Pacífico y la serenidad
+            natural.</p>
+        </div>
+      </header>
+      <div class="section container">
+        <div class="esencias grid-dos">
+          <article class="card-simple" data-continente="oceania" data-esencia="Coco y Coral Ocean" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/oceania/coco-coral.jpg" alt="Coco y Coral Ocean">
+            <h4>Coco y Coral Ocean</h4>
+            <p>Dulce y salino se entrelazan en una brisa oceánica limpia y envolvente.</p>
+          </article>
+          <article class="card-simple" data-continente="oceania" data-esencia="Eucalipto y Coco" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/oceania/eucalipto-coco.jpg" alt="Eucalipto y Coco">
+            <h4>Eucalipto y Coco</h4>
+            <p>Equilibrio perfecto entre frescura herbal y suavidad tropical.</p>
+          </article>
+          <article class="card-simple" data-continente="oceania" data-esencia="Ylang-Ylang (Jazmín, Gardenia)"
+            tabindex="0" role="link">
+            <img src="assets/ingredientes/oceania/ylang-gardenia.jpg" alt="Ylang-Ylang (Jazmín, Gardenia)">
+            <h4>Ylang-Ylang (Jazmín, Gardenia)</h4>
+            <p>Exótica y elegante, flor blanca con alma de verano.</p>
+          </article>
+          <article class="card-simple" data-continente="oceania" data-esencia="Gardenia del Pacífico" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/oceania/gardenia-pacifico.jpg" alt="Gardenia del Pacífico">
+            <h4>Gardenia del Pacífico</h4>
+            <p>Ligera, floral y brillante como una mañana junto al mar.</p>
+          </article>
+          <article class="card-simple" data-continente="oceania" data-esencia="Lemongrass y Bamboo Verde" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/oceania/lemongrass-bamboo.jpg" alt="Lemongrass y Bamboo Verde">
+            <h4>Lemongrass y Bamboo Verde</h4>
+            <p>Refrescante y vivaz, ideal para revitalizar los espacios.</p>
+          </article>
+        </div>
+        <a class="volver" href="#colecciones" data-nav="colecciones">← Volver a colecciones</a>
+      </div>
+    </section>
+
+    <!-- AMÉRICA -->
+    <section id="america" class="pagina" data-bg="Continentes/América/WhatsApp Image 2021-12-07 at 00.46.19 (1).jpeg">
+      <header class="hero-cont">
+        <div class="hero-inner">
+          <h1>América</h1>
+          <p>Diversa, vibrante y dulce. Café, cacao, frutas y especias que celebran la energía del continente.</p>
+        </div>
+      </header>
+      <div class="section container">
+        <div class="esencias grid-dos">
+          <article class="card-simple" data-continente="america" data-esencia="Café y Cacao" tabindex="0" role="link">
+            <img src="assets/ingredientes/america/cafe-cacao.jpg" alt="Café y Cacao">
+            <h4>Café y Cacao</h4>
+            <p>Intenso y envolvente, como un tostado recién molido con fondo de chocolate.</p>
+          </article>
+          <article class="card-simple" data-continente="america" data-esencia="Vainilla y Caramelo" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/america/vainilla-caramelo.jpg" alt="Vainilla y Caramelo">
+            <h4>Vainilla y Caramelo</h4>
+            <p>Dulzor cremoso y reconfortante, ideal para ambientes cálidos.</p>
+          </article>
+          <article class="card-simple" data-continente="america" data-esencia="Manzana y Canela" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/america/manzana-canela.jpg" alt="Manzana y Canela">
+            <h4>Manzana y Canela</h4>
+            <p>Hogar al instante: fruta roja y especias suaves.</p>
+          </article>
+          <article class="card-simple" data-continente="america" data-esencia="Vainilla y Coco" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/america/vainilla-coco.jpg" alt="Vainilla y Coco">
+            <h4>Vainilla y Coco</h4>
+            <p>Tropical dulce con final cremoso.</p>
+          </article>
+          <article class="card-simple" data-continente="america" data-esencia="Café y Caramelo" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/america/cafe-caramelo.jpg" alt="Café y Caramelo">
+            <h4>Café y Caramelo</h4>
+            <p>Gourmand moderno: amargor amable y azúcar tostada.</p>
+          </article>
+          <article class="card-simple" data-continente="america" data-esencia="Frutos Rojos y Canela" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/america/frutosrojos-canela.jpg" alt="Frutos Rojos y Canela">
+            <h4>Frutos Rojos y Canela</h4>
+            <p>Bayas jugosas con chispa especiada.</p>
+          </article>
+          <article class="card-simple" data-continente="america" data-esencia="Caramelo y Chocolate" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/america/caramelo-chocolate.jpg" alt="Caramelo y Chocolate">
+            <h4>Caramelo y Chocolate</h4>
+            <p>Postre goloso, denso y elegante.</p>
+          </article>
+          <article class="card-simple" data-continente="america" data-esencia="Café y Canela" tabindex="0" role="link">
+            <img src="assets/ingredientes/america/cafe-canela.jpg" alt="Café y Canela">
+            <h4>Café y Canela</h4>
+            <p>Cuerpo cafetero con especias cálidas.</p>
+          </article>
+          <article class="card-simple" data-continente="america" data-esencia="Chocolate y Limón" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/america/chocolate-limon.jpg" alt="Chocolate y Limón">
+            <h4>Chocolate y Limón</h4>
+            <p>Contraste brillante: cacao profundo con cítrico fresco.</p>
+          </article>
+          <article class="card-simple" data-continente="america" data-esencia="Frutos Tropicales y Cítricos"
+            tabindex="0" role="link">
+            <img src="assets/ingredientes/america/tropicales-citricos.jpg" alt="Frutos Tropicales y Cítricos">
+            <h4>Frutos Tropicales y Cítricos</h4>
+            <p>Vibrante, jugosa y luminosa; espíritu latino en estado puro.</p>
+          </article>
+        </div>
+        <a class="volver" href="#colecciones" data-nav="colecciones">← Volver a colecciones</a>
+      </div>
+    </section>
+
+    <!-- EUROPA -->
+    <section id="europa" class="pagina" data-bg="Continentes/Europa/europa.jpg">
+      <header class="hero-cont">
+        <div class="hero-inner">
+          <h1>Europa</h1>
+          <p>Clásica y elegante. Entre lavandas, flores nobles y dulces vainillas mediterráneas.</p>
+        </div>
+      </header>
+      <div class="section container">
+        <div class="esencias grid-dos">
+          <article class="card-simple" data-continente="europa" data-esencia="Vainilla Francesa y Lavanda" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/europa/vainilla-lavanda.jpg" alt="Vainilla Francesa y Lavanda">
+            <h4>Vainilla Francesa y Lavanda</h4>
+            <p>Suavidad floral con fondo dulce y cremoso.</p>
+          </article>
+          <article class="card-simple" data-continente="europa" data-esencia="Rosas Búlgaras, Vainilla y Lavanda"
+            tabindex="0" role="link">
+            <img src="assets/ingredientes/europa/rosas-bulgaras.jpg" alt="Rosas Búlgaras, Vainilla y Lavanda">
+            <h4>Rosas Búlgaras, Vainilla y Lavanda</h4>
+            <p>Romántico y atemporal, puro perfume europeo.</p>
+          </article>
+          <article class="card-simple" data-continente="europa" data-esencia="Chocolate y Vainilla" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/europa/chocolate-vainilla.jpg" alt="Chocolate y Vainilla">
+            <h4>Chocolate y Vainilla</h4>
+            <p>Placer gourmand con notas amaderadas sutiles.</p>
+          </article>
+          <article class="card-simple" data-continente="europa" data-esencia="Azahar de Naranjo y Miel" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/europa/azahar-miel.jpg" alt="Azahar de Naranjo y Miel">
+            <h4>Azahar de Naranjo y Miel</h4>
+            <p>Refrescante y cálido a la vez, típico del Mediterráneo.</p>
+          </article>
+          <article class="card-simple" data-continente="europa" data-esencia="Rosas, Peonías y Limón Dulce" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/europa/rosas-peonias.jpg" alt="Rosas, Peonías y Limón Dulce">
+            <h4>Rosas, Peonías y Limón Dulce</h4>
+            <p>Floral chispeante con toque cítrico femenino.</p>
+          </article>
+          <article class="card-simple" data-continente="europa" data-esencia="Bergamota" tabindex="0" role="link">
+            <img src="assets/ingredientes/europa/bergamota.jpg" alt="Bergamota">
+            <h4>Bergamota</h4>
+            <p>Notas frescas y elegantes, símbolo de pureza.</p>
+          </article>
+          <article class="card-simple" data-continente="europa" data-esencia="Limón y Azúcar (Limoncello)" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/europa/limoncello.jpg" alt="Limón y Azúcar (Limoncello)">
+            <h4>Limón y Azúcar (Limoncello)</h4>
+            <p>Cítrico dulce, festivo y luminoso.</p>
+          </article>
+          <article class="card-simple" data-continente="europa" data-esencia="Té Verde, Jazmín y Pimienta" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/europa/teverde.jpg" alt="Té Verde, Jazmín y Pimienta">
+            <h4>Té Verde, Jazmín y Pimienta</h4>
+            <p>Brisa portuguesa: luminosa y sofisticada.</p>
+          </article>
+          <article class="card-simple" data-continente="europa" data-esencia="Vainilla, Patchouli y Azúcar Tostado"
+            tabindex="0" role="link">
+            <img src="assets/ingredientes/europa/vainilla-patchouli.jpg" alt="Vainilla, Patchouli y Azúcar Tostado">
+            <h4>Vainilla, Patchouli y Azúcar Tostado</h4>
+            <p>Fondo goloso con elegancia griega.</p>
+          </article>
+          <article class="card-simple" data-continente="europa" data-esencia="Lavanda, Ylang-Ylang y Jazmín"
+            tabindex="0" role="link">
+            <img src="assets/ingredientes/europa/lavanda-ylang.jpg" alt="Lavanda, Ylang-Ylang y Jazmín">
+            <h4>Lavanda, Ylang-Ylang y Jazmín</h4>
+            <p>Floral delicado con equilibrio entre calma y alegría.</p>
+          </article>
+          <article class="card-simple" data-continente="europa" data-esencia="Naranja, Jazmín y Sándalo" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/europa/naranja-jazmin.jpg" alt="Naranja, Jazmín y Sándalo">
+            <h4>Naranja, Jazmín y Sándalo</h4>
+            <p>Armonía soleada y mediterránea.</p>
+          </article>
+          <article class="card-simple" data-continente="europa" data-esencia="Coco, Vainilla, Azúcar Tostado y Ámbar"
+            tabindex="0" role="link">
+            <img src="assets/ingredientes/europa/coco-vainilla.jpg" alt="Coco, Vainilla, Azúcar Tostado y Ámbar">
+            <h4>Coco, Vainilla, Azúcar Tostado y Ámbar</h4>
+            <p>Sensual y envolvente, dulzor con profundidad ámbar.</p>
+          </article>
+          <article class="card-simple" data-continente="europa" data-esencia="Eucalipto" tabindex="0" role="link">
+            <img src="assets/ingredientes/europa/eucalipto.jpg" alt="Eucalipto">
+            <h4>Eucalipto</h4>
+            <p>Nota fresca y limpia, europea y atemporal.</p>
+          </article>
+        </div>
+        <a class="volver" href="#colecciones" data-nav="colecciones">← Volver a colecciones</a>
+      </div>
+    </section>
+
+    <!-- ASIA -->
+    <section id="asia" class="pagina" data-bg="Continentes/Asia/asia.jpg">
+      <header class="hero-cont">
+        <div class="hero-inner">
+          <h1>Asia</h1>
+          <p>Equilibrio, armonía y espiritualidad. Fragancias que conectan cuerpo y alma con serenidad.</p>
+        </div>
+      </header>
+      <div class="section container">
+        <div class="esencias grid-dos">
+          <article class="card-simple" data-continente="asia" data-esencia="Benjuí, Sándalo dulce y Rosas" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/asia/benjui-rosas.jpg" alt="Benjuí, Sándalo dulce y Rosas">
+            <h4>Benjuí, Sándalo dulce y Rosas</h4>
+            <p>Floral ambarado con toque balsámico, delicado y místico.</p>
+          </article>
+          <article class="card-simple" data-continente="asia" data-esencia="Jazmín, Tilo y Magnolias" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/asia/jazmin-tilo-magnolia.jpg" alt="Jazmín, Tilo y Magnolias">
+            <h4>Jazmín, Tilo y Magnolias</h4>
+            <p>Equilibrio entre frescura floral y suavidad oriental.</p>
+          </article>
+          <article class="card-simple" data-continente="asia" data-esencia="Peras, Manzanas y Flores Blancas"
+            tabindex="0" role="link">
+            <img src="assets/ingredientes/asia/peras-manzanas.jpg" alt="Peras, Manzanas y Flores Blancas">
+            <h4>Peras, Manzanas y Flores Blancas</h4>
+            <p>Fragancia luminosa con notas de jardín en flor.</p>
+          </article>
+          <article class="card-simple" data-continente="asia" data-esencia="Amapolas y Gardenias" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/asia/amapolas-gardenias.jpg" alt="Amapolas y Gardenias">
+            <h4>Amapolas y Gardenias</h4>
+            <p>Fondo elegante, suave y sensual.</p>
+          </article>
+          <article class="card-simple" data-continente="asia" data-esencia="Benjuí y Tilo" tabindex="0" role="link">
+            <img src="assets/ingredientes/asia/benjui-tilo.jpg" alt="Benjuí y Tilo">
+            <h4>Benjuí y Tilo</h4>
+            <p>Ambarado y fresco, una fusión de espiritualidad y calma.</p>
+          </article>
+          <article class="card-simple" data-continente="asia" data-esencia="Flor de Loto y Sándalo" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/asia/loto-sandalo.jpg" alt="Flor de Loto y Sándalo">
+            <h4>Flor de Loto y Sándalo</h4>
+            <p>Paz y pureza con fondo levemente ahumado.</p>
+          </article>
+          <article class="card-simple" data-continente="asia" data-esencia="Jazmín Chino y Tilo" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/asia/jazmin-chino.jpg" alt="Jazmín Chino y Tilo">
+            <h4>Jazmín Chino y Tilo</h4>
+            <p>Floral etéreo y refinado con alma oriental.</p>
+          </article>
+          <article class="card-simple" data-continente="asia" data-esencia="Madreselva y Jazmín" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/asia/madreselva-jazmin.jpg" alt="Madreselva y Jazmín">
+            <h4>Madreselva y Jazmín</h4>
+            <p>Dulce, radiante y femenina.</p>
+          </article>
+          <article class="card-simple" data-continente="asia" data-esencia="Gardenia y Tilo" tabindex="0" role="link">
+            <img src="assets/ingredientes/asia/gardenia-tilo.jpg" alt="Gardenia y Tilo">
+            <h4>Gardenia y Tilo</h4>
+            <p>Natural, fresco y de elegancia atemporal.</p>
+          </article>
+          <article class="card-simple" data-continente="asia" data-esencia="Flores Blancas y Citrus" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/asia/flores-citrus.jpg" alt="Flores Blancas y Citrus">
+            <h4>Flores Blancas y Citrus</h4>
+            <p>Limpia y brillante, con chispa cítrica.</p>
+          </article>
+          <article class="card-simple" data-continente="asia" data-esencia="Té Verde, Jazmín y Pimienta" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/asia/teverde-jazmin.jpg" alt="Té Verde, Jazmín y Pimienta">
+            <h4>Té Verde, Jazmín y Pimienta</h4>
+            <p>Toque vibrante y herbal con chispa especiada.</p>
+          </article>
+        </div>
+        <a class="volver" href="#colecciones" data-nav="colecciones">← Volver a colecciones</a>
+      </div>
+    </section>
+
+    <!-- ÁFRICA -->
+    <section id="africa" class="pagina" data-bg="Continentes/África/africa.jpg">
+      <header class="hero-cont">
+        <div class="hero-inner">
+          <h1>África</h1>
+          <p>Tierra cálida y ancestral. Aromas intensos, dulces y especiados que evocan la energía vital del continente.
+          </p>
+        </div>
+      </header>
+      <div class="section container">
+        <div class="esencias grid-dos">
+          <article class="card-simple" data-continente="africa" data-esencia="Vainilla Madagascar y Cacao" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/africa/vainilla-cacao.jpg" alt="Vainilla Madagascar y Cacao">
+            <h4>Vainilla Madagascar y Cacao</h4>
+            <p>Fondo cálido, envolvente y cremoso con notas de cacao profundo.</p>
+          </article>
+          <article class="card-simple" data-continente="africa" data-esencia="Vainilla dulce, Ylang-Ylang y Café"
+            tabindex="0" role="link">
+            <img src="assets/ingredientes/africa/vainilla-ylang-cafe.jpg" alt="Vainilla dulce, Ylang-Ylang y Café">
+            <h4>Vainilla dulce, Ylang-Ylang y Café</h4>
+            <p>Floral con carácter, dulce y con fuerza aromática.</p>
+          </article>
+          <article class="card-simple" data-continente="africa" data-esencia="Flor de Loto y Sándalo" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/africa/loto-sandalo.jpg" alt="Flor de Loto y Sándalo">
+            <h4>Flor de Loto y Sándalo</h4>
+            <p>Equilibrio entre serenidad floral y base amaderada exótica.</p>
+          </article>
+          <article class="card-simple" data-continente="africa" data-esencia="Vainilla Madagascar y Café" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/africa/vainilla-cafe.jpg" alt="Vainilla Madagascar y Café">
+            <h4>Vainilla Madagascar y Café</h4>
+            <p>Conexión entre lo suave y lo intenso, de espíritu africano.</p>
+          </article>
+          <article class="card-simple" data-continente="africa" data-esencia="Ylang-Ylang y Jazmín" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/africa/ylang-jazmin.jpg" alt="Ylang-Ylang y Jazmín">
+            <h4>Ylang-Ylang y Jazmín</h4>
+            <p>Notas florales voluptuosas con un toque oriental.</p>
+          </article>
+          <article class="card-simple" data-continente="africa" data-esencia="Frutas, madera y vainilla" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/africa/frutas-madera-vainilla.jpg" alt="Frutas, madera y vainilla">
+            <h4>Frutas, madera y vainilla</h4>
+            <p>Cítricos brillantes sobre fondo de canela, ámbar y café.</p>
+          </article>
+          <article class="card-simple" data-continente="africa" data-esencia="Ámbar Rojo, Musk y Jazmín" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/africa/ambar-rojo.jpg" alt="Ámbar Rojo, Musk y Jazmín">
+            <h4>Ámbar Rojo, Musk y Jazmín</h4>
+            <p>Inspiración egipcia: denso, místico y sofisticado.</p>
+          </article>
+          <article class="card-simple" data-continente="africa" data-esencia="Canela, Miel y Vainilla" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/africa/canela-miel-vainilla.jpg" alt="Canela, Miel y Vainilla">
+            <h4>Canela, Miel y Vainilla</h4>
+            <p>Dulzura especiada, evocando calor y hogar.</p>
+          </article>
+          <article class="card-simple" data-continente="africa" data-esencia="Ylang-Ylang, Jazmín y Sándalo"
+            tabindex="0" role="link">
+            <img src="assets/ingredientes/africa/ylang-jazmin-sandalo.jpg" alt="Ylang-Ylang, Jazmín y Sándalo">
+            <h4>Ylang-Ylang, Jazmín y Sándalo</h4>
+            <p>Floral cálido con un fondo amaderado sensual.</p>
+          </article>
+          <article class="card-simple" data-continente="africa" data-esencia="Naranja y Canela" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/africa/naranja-canela.jpg" alt="Naranja y Canela">
+            <h4>Naranja y Canela</h4>
+            <p>Brillante mezcla de frescura cítrica y especia vibrante.</p>
+          </article>
+        </div>
+        <a class="volver" href="#colecciones" data-nav="colecciones">← Volver a colecciones</a>
+      </div>
+    </section>
+
+    <!-- CARIBE -->
+    <section id="caribe" class="pagina" data-bg="Continentes/Caribe/caribe.jpg">
+      <header class="hero-cont">
+        <div class="hero-inner">
+          <h1>Caribe</h1>
+          <p>Coco, flores y brisa marina. La calidez del sol tropical transformada en aroma.</p>
+        </div>
+      </header>
+      <div class="section container">
+        <div class="esencias grid-dos">
+          <article class="card-simple" data-continente="caribe" data-esencia="Reina de la Noche y Coco" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/caribe/reina-coco.jpg" alt="Reina de la Noche y Coco">
+            <h4>Reina de la Noche y Coco</h4>
+            <p>Exótica y luminosa, con la dulzura del trópico.</p>
+          </article>
+          <article class="card-simple" data-continente="caribe" data-esencia="Reina de la Noche y Vainilla" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/caribe/reina-vainilla.jpg" alt="Reina de la Noche y Vainilla">
+            <h4>Reina de la Noche y Vainilla</h4>
+            <p>Elegante, suave y seductora, con fondo cálido.</p>
+          </article>
+          <article class="card-simple" data-continente="caribe" data-esencia="Orquídea Negra y Coco" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/caribe/orquidea-coco.jpg" alt="Orquídea Negra y Coco">
+            <h4>Orquídea Negra y Coco</h4>
+            <p>Compleja y sofisticada, con notas florales y frutales.</p>
+          </article>
+          <article class="card-simple" data-continente="caribe" data-esencia="Orquídea Negra y Magnolia" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/caribe/orquidea-magnolia.jpg" alt="Orquídea Negra y Magnolia">
+            <h4>Orquídea Negra y Magnolia</h4>
+            <p>Floral intensa con fondo aterciopelado.</p>
+          </article>
+          <article class="card-simple" data-continente="caribe" data-esencia="Coco y Canela" tabindex="0" role="link">
+            <img src="assets/ingredientes/caribe/coco-canela.jpg" alt="Coco y Canela">
+            <h4>Coco y Canela</h4>
+            <p>Mezcla cálida de dulzura tropical y especia sutil.</p>
+          </article>
+          <article class="card-simple" data-continente="caribe" data-esencia="Lemon Sugar" tabindex="0" role="link">
+            <img src="assets/ingredientes/caribe/lemon-sugar.jpg" alt="Lemon Sugar">
+            <h4>Lemon Sugar</h4>
+            <p>Refrescante, chispeante y juvenil.</p>
+          </article>
+          <article class="card-simple" data-continente="caribe" data-esencia="Sandía y Melón" tabindex="0" role="link">
+            <img src="assets/ingredientes/caribe/sandia-melon.jpg" alt="Sandía y Melón">
+            <h4>Sandía y Melón</h4>
+            <p>Frutal fresco que despierta alegría.</p>
+          </article>
+          <article class="card-simple" data-continente="caribe" data-esencia="Coco y Lima" tabindex="0" role="link">
+            <img src="assets/ingredientes/caribe/coco-lima.jpg" alt="Coco y Lima">
+            <h4>Coco y Lima</h4>
+            <p>Vibrante equilibrio entre lo cremoso y lo cítrico.</p>
+          </article>
+          <article class="card-simple" data-continente="caribe" data-esencia="Mango y Flor de Tiaré" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/caribe/mango-tiare.jpg" alt="Mango y Flor de Tiaré">
+            <h4>Mango y Flor de Tiaré</h4>
+            <p>Solar, sensual y profundamente veraniega.</p>
+          </article>
+        </div>
+        <a class="volver" href="#colecciones" data-nav="colecciones">← Volver a colecciones</a>
+      </div>
+    </section>
+
+    <!-- ORIENTE -->
+    <section id="oriente" class="pagina" data-bg="Continentes/Oriente/oriente.jpg">
+      <header class="hero-cont">
+        <div class="hero-inner">
+          <h1>Oriente</h1>
+          <p>Exotismo, misterio y elegancia. Especias doradas, miel y maderas sagradas.</p>
+        </div>
+      </header>
+      <div class="section container">
+        <div class="esencias grid-dos">
+          <article class="card-simple" data-continente="oriente" data-esencia="Rosas de Damasco, Miel y Sándalo"
+            tabindex="0" role="link">
+            <img src="assets/ingredientes/oriente/rosas-miel.jpg" alt="Rosas de Damasco, Miel y Sándalo">
+            <h4>Rosas de Damasco, Miel y Sándalo</h4>
+            <p>Opulento y sensual, un clásico oriental.</p>
+          </article>
+          <article class="card-simple" data-continente="oriente" data-esencia="Naranja, Pimienta y Canela" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/oriente/naranja-canela.jpg" alt="Naranja, Pimienta y Canela">
+            <h4>Naranja, Pimienta y Canela</h4>
+            <p>Brillante, picante y cálido: energía pura.</p>
+          </article>
+          <article class="card-simple" data-continente="oriente" data-esencia="Café y Canela" tabindex="0" role="link">
+            <img src="assets/ingredientes/oriente/cafe-canela.jpg" alt="Café y Canela">
+            <h4>Café y Canela</h4>
+            <p>Intenso y dulce con un fondo especiado envolvente.</p>
+          </article>
+          <article class="card-simple" data-continente="oriente" data-esencia="Ámbar y Especias de Arabia" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/oriente/ambar-especias.jpg" alt="Ámbar y Especias de Arabia">
+            <h4>Ámbar y Especias de Arabia</h4>
+            <p>Rico, profundo y majestuoso.</p>
+          </article>
+          <article class="card-simple" data-continente="oriente" data-esencia="Incienso y Vainilla Oriental"
+            tabindex="0" role="link">
+            <img src="assets/ingredientes/oriente/incienso-vainilla.jpg" alt="Incienso y Vainilla Oriental">
+            <h4>Incienso y Vainilla Oriental</h4>
+            <p>Espiritual y cálido; equilibrio de misticismo y dulzura.</p>
+          </article>
+        </div>
+        <a class="volver" href="#colecciones" data-nav="colecciones">← Volver a colecciones</a>
+      </div>
+    </section>
+
+    <!-- NAVIDAD -->
+    <section id="navidad" class="pagina" data-bg="Continentes/Navidad/navidad (2).jpg">
+      <header class="hero-cont">
+        <div class="hero-inner">
+          <h1>Navidad</h1>
+          <p>Magia, hogar y dulzura. Aromas que iluminan los recuerdos más cálidos del año.</p>
+        </div>
+      </header>
+      <div class="section container">
+        <div class="esencias grid-dos">
+          <article class="card-simple" data-continente="ocasiones" data-esencia="Vainilla, Chocolate y Almendras Dulces"
+            tabindex="0" role="link">
+            <img src="assets/ingredientes/ocasiones/navidad1.jpg" alt="Vainilla, Chocolate y Almendras Dulces">
+            <h4>Vainilla, Chocolate y Almendras Dulces</h4>
+            <p>Tradicional, goloso y reconfortante. El abrazo dulce de la temporada.</p>
+          </article>
+          <article class="card-simple" data-continente="ocasiones"
+            data-esencia="Naranja, Canela, Jengibre y Nuez Moscada" tabindex="0" role="link">
+            <img src="assets/ingredientes/ocasiones/navidad2.jpg" alt="Naranja, Canela, Jengibre y Nuez Moscada">
+            <h4>Naranja, Canela, Jengibre y Nuez Moscada</h4>
+            <p>Especia brillante y cítrica que perfuma el invierno.</p>
+          </article>
+          <article class="card-simple" data-continente="ocasiones" data-esencia="Galletas y Especias Navideñas"
+            tabindex="0" role="link">
+            <img src="assets/ingredientes/ocasiones/navidad3.jpg" alt="Galletas y Especias Navideñas">
+            <h4>Galletas y Especias Navideñas</h4>
+            <p>Dulce y festiva; recuerda a la repostería casera.</p>
+          </article>
+          <article class="card-simple" data-continente="ocasiones" data-esencia="Pino, Caramelo y Menta" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/ocasiones/navidad4.jpg" alt="Pino, Caramelo y Menta">
+            <h4>Pino, Caramelo y Menta</h4>
+            <p>Refrescante y luminoso: la versión fresca de la Navidad.</p>
+          </article>
+        </div>
+        <a class="volver" href="#ocasiones" data-nav="ocasiones">← Volver a ocasiones</a>
+      </div>
+    </section>
+
+    <!-- VERANO -->
+    <section id="verano" class="pagina" data-bg="Images/citro.jpg">
+      <header class="hero-cont">
+        <div class="hero-inner">
+          <h1>Verano</h1>
+          <p>Luz, frescura y alegría. Aromas que capturan la libertad y el sol del estío.</p>
+        </div>
+      </header>
+      <div class="section container">
+        <div class="esencias grid-dos">
+          <article class="card-simple" data-continente="ocasiones" data-esencia="Citronella y Lemongrass" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/ocasiones/verano1.jpg" alt="Citronella y Lemongrass">
+            <h4>Citronella y Lemongrass</h4>
+            <p>Fresca y cítrica, ideal para tardes al aire libre.</p>
+          </article>
+          <article class="card-simple" data-continente="ocasiones" data-esencia="Lima y Verbena" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/ocasiones/verano2.jpg" alt="Lima y Verbena">
+            <h4>Lima y Verbena</h4>
+            <p>Chispeante, herbal y luminosa; puro verano.</p>
+          </article>
+          <article class="card-simple" data-continente="ocasiones" data-esencia="Coco y Flor de Loto" tabindex="0"
+            role="link">
+            <img src="assets/ingredientes/ocasiones/verano3.jpg" alt="Coco y Flor de Loto">
+            <h4>Coco y Flor de Loto</h4>
+            <p>Dulce, floral y tropical: la esencia del descanso.</p>
+          </article>
+        </div>
+        <a class="volver" href="#ocasiones" data-nav="ocasiones">← Volver a ocasiones</a>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="pagina" data-bg="fondo.jpg">
+      <div class="container narrow">
+        <h2>Contacto</h2>
+        <form action="https://formspree.io/f/mjvndzra" method="POST" class="contact-form" id="contactoForm" novalidate>
+          <label for="nombre">Nombre*</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <fieldset class="preferencia">
+            <legend>¿Cómo preferís que te contactemos?*</legend>
+            <label><input type="radio" name="contacto" value="email" required> Email</label>
+            <label><input type="radio" name="contacto" value="whatsapp"> WhatsApp</label>
+          </fieldset>
+
+          <div id="campoEmail" class="campo-oculto">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" />
+          </div>
+
+          <div id="campoWhatsApp" class="campo-oculto">
+            <label for="whatsapp">WhatsApp*</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+54 9 11 1234 5678" />
+          </div>
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contame qué te interesa…"></textarea>
+
+          <button type="submit" class="btn">✨ Enviar mensaje</button>
+          <p id="formMsg" class="form-msg" role="alert" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+    <!-- CARRITO DE COMPRAS -->
+    <section id="carrito" class="pagina" data-bg="fondo.jpg">
+      <div class="container narrow">
+        <h2>🛍️ Tu Carrito</h2>
+        <div id="carritoLista" class="carrito-lista"></div>
+        <div class="carrito-total">
+          <p>Total: <span id="carritoTotal">$0</span></p>
+          <button id="vaciarCarrito" class="btn">Vaciar Carrito</button>
+          <button id="finalizarCompra" class="btn btn-primary">Finalizar Compra</button>
+        </div>
+      </div>
+      </div>
+      <!-- 🧾 Sección de pago -->
+      <div id="pagoSection"
+        style="display:none; margin-top:20px; padding:20px; border:1px solid #ff6f3c; border-radius:10px;">
+        <h3>💳 Pagar tu compra</h3>
+        <p>Seleccioná el medio de pago que prefieras:</p>
+        <form id="formPago">
+          <label><input type="radio" name="medioPago" value="tarjeta" checked> Tarjeta de crédito o débito</label><br>
+          <label><input type="radio" name="medioPago" value="transferencia"> Transferencia bancaria</label><br>
+          <label><input type="radio" name="medioPago" value="efectivo"> Efectivo en punto de entrega</label><br><br>
+          <button type="button" onclick="confirmarPago()">Confirmar Pago</button>
+        </form>
+        <div id="pagoConfirmado" style="display:none; margin-top:15px;">
+          <h4>✅ ¡Pago confirmado!</h4>
+          <p>Gracias por tu compra. Te enviaremos la confirmación por correo o WhatsApp.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Bon Voyage · Hecho a mano con amor</p>
+  </footer>
+
+  <!-- =========================================
+       JAVASCRIPT INTEGRADO
+  ========================================== -->
+  <script>
+    // =======================================================
+    // 1. DATOS (ENVASES Y ESENCIAS)
+    // =======================================================
+    //CATÁLOGO COMPLETO DE ENVASES – AROMAS BON VOYAGE (Julio 2025)
+
+    const ENVASES_DATA = {
+      etoile: {
+        nombre: "ÉTOILE",
+        desc: "Vela vegetal y natural en envase de vidrio cristal reutilizable con pabilo 100% algodón. Medidas: 8.5 × 8.5 cm.",
+        precio: 21000,
+        img: "Envases/étoile.jpg"
+      },
+      etoile_tapa: {
+        nombre: "ÉTOILE CON TAPA",
+        desc: "Vela vegetal y natural en envase de vidrio cristal reutilizable con tapa dorada y pabilo 100% algodón. Medidas: 8.5 × 8.5 cm.",
+        precio: 22000,
+        img: "Envases/étoilecontapa.jpg"
+      },
+      espoir_mat: {
+        nombre: "ESPOIR MAT",
+        desc: "Vela vegetal y natural en envase de vidrio verde mate reutilizable con pabilo 100% algodón. Medidas: 8.5 × 8.5 cm.",
+        precio: 22000,
+        img: "Envases/espoirmat.jpg"
+      },
+      espoir_mat_tapa: {
+        nombre: "ESPOIR MAT CON TAPA",
+        desc: "Vela vegetal y natural en envase de vidrio verde mate reutilizable con tapa dorada y pabilo 100% algodón. Medidas: 8.5 × 8.5 cm.",
+        precio: 23000,
+        img: "Envases/espoirmatcontapa.jpg"
+      },
+      prune_mat: {
+        nombre: "PRUNE MAT",
+        desc: "Vela vegetal y natural en envase de vidrio color ciruela mate reutilizable con pabilo 100% algodón. Medidas: 8.5 × 8.5 cm.",
+        precio: 22000,
+        img: "Envases/prunemat.jpg"
+      },
+      prune_mat_tapa: {
+        nombre: "PRUNE MAT CON TAPA",
+        desc: "Vela vegetal y natural en envase de vidrio ciruela mate con tapa dorada reutilizable y pabilo 100% algodón. Medidas: 8.5 × 8.5 cm.",
+        precio: 23000,
+        img: "Envases/prunematcontapa.jpg"
+      },
+      noir_mat: {
+        nombre: "NOIR MAT",
+        desc: "Vela vegetal y natural en envase de vidrio negro mate reutilizable con pabilo 100% algodón. Medidas: 8.5 × 8.5 cm.",
+        precio: 22000,
+        img: "Envases/noirmat.jpg"
+      },
+      noir_mat_tapa: {
+        nombre: "NOIR MAT CON TAPA",
+        desc: "Vela vegetal y natural en envase de vidrio negro mate reutilizable con tapa dorada y pabilo 100% algodón. Medidas: 8.5 × 8.5 cm.",
+        precio: 23000,
+        img: "Envases/noirmatcontapa.jpg"
+      },
+      bleu: {
+        nombre: "BLEU",
+        desc: "Vela vegetal y natural en envase de aluminio azul reutilizable con tapa y pabilo 100% algodón. Medidas: 8.8 cm.",
+        precio: 25000,
+        img: "Envases/bleu.jpg"
+      },
+      petit_givre_mat: {
+        nombre: "PETIT GIVRÉ MAT",
+        desc: "Vela vegetal y natural en envase de vidrio esmerilado mate reutilizable con pabilo 100% algodón. Medidas: 7.8 cm.",
+        precio: 21000,
+        img: "Envases/petitgivremat.jpg"
+      },
+      petit_givre_mat_tapa: {
+        nombre: "PETIT GIVRÉ MAT CON TAPA",
+        desc: "Vela vegetal y natural en envase de vidrio esmerilado mate con tapa dorada y pabilo 100% algodón. Medidas: 7.8 cm.",
+        precio: 22000,
+        img: "Envases/petitgivrematcontapa.jpg"
+      },
+      soleil: {
+        nombre: "SOLEIL",
+        desc: "Vela vegetal y natural en envase de vidrio cristal reutilizable, disponible con o sin tapa. Medidas: 8.8 cm.",
+        precio: 15000,
+        img: "Envases/soleil.jpg"
+      },
+      jolie_tapa: {
+        nombre: "JOLIE CON TAPA",
+        desc: "Vela vegetal y natural en envase de vidrio beige reutilizable con tapa dorada y pabilo 100% algodón. Medidas: 7.5 cm.",
+        precio: 22500,
+        img: "Envases/joliecontapa.jpg"
+      },
+      jolie_mat_tapa: {
+        nombre: "JOLIE MAT CON TAPA",
+        desc: "Vela vegetal y natural en envase de vidrio negro mate reutilizable con tapa dorada. Medidas: 7.5 cm.",
+        precio: 23500,
+        img: "Envases/joliematcontapa.jpg"
+      },
+      compota: {
+        nombre: "COMPOTA",
+        desc: "Vela vegetal y natural en envase de cerámica artesanal reutilizable de 300 ml. Ideal como pieza decorativa o regalo. Medidas: 9 cm aprox.",
+        precio: 46000,
+        img: "assets/envases/compota.jpg"
+      },
+      bulles: {
+        nombre: "BULLES",
+        desc: "Edición limitada. Vela vegetal y natural en envase de vidrio cristal labrado con tapa. Medidas: 6 × 8 cm.",
+        precio: 15000,
+        img: "Envases/bulles.jpg"
+      },
+      noir_ii: {
+        nombre: "NOIR II",
+        desc: "Vela vegetal y natural en envase de vidrio negro mate con tapa hermética ajustada y pabilo 100% algodón. Medidas: 8.5 × 8.5 cm.",
+        precio: 23000,
+        img: "Envases/noirII.jpg"
+      },
+      petit_noir_mat_ii: {
+        nombre: "PETIT NOIR MAT II",
+        desc: "Versión compacta del Noir Mat en vidrio negro mate con tapa dorada y pabilo 100% algodón. Medidas: 7.5 cm.",
+        precio: 22500,
+        img: "Envases/petitnoirmatII.jpg"
+      },
+      amour_tapa: {
+        nombre: "AMOUR",
+        desc: "Vela vegetal y natural en envase de vidrio cristal labrado reutilizable con tapa. Medidas: 10 × 10 cm.",
+        precio: 30000,
+        img: "Envases/amour.jpg"
+      },
+      petit_lumiere_tapa: {
+        nombre: "PETIT LUMIÈRE CON TAPA",
+        desc: "Vela vegetal y natural en envase de vidrio beige reutilizable con tapa dorada y pabilo 100% algodón. Medidas: 7.8 cm.",
+        precio: 22000,
+        img: "Envases/petitlumierecontapa.jpg"
+      },
+    };
+
+
+    const ESENCIAS = {
+      africa: {
+        "Vainilla Madagascar y Cacao": {
+          corta: "Fondo cálido, envolvente y cremoso con notas de cacao profundo.",
+          larga: "Inspirada en la tierra africana, esta esencia combina la dulzura natural de la vainilla de Madagascar con el carácter amargo del cacao. Perfecta para espacios donde buscás calidez y elegancia.",
+          ingredientesImg: "assets/ingredientes/africa/vainilla-cacao.jpg",
+          detalles: ["Notas de Salida: Vainilla de Madagascar", "Notas de Corazón: Cacao Tostado", "Notas de Fondo: Caramelo"]
+        },
+        "Vainilla dulce, Ylang-Ylang y Café": {
+          corta: "Floral con carácter, dulce y con fuerza aromática.",
+          larga: "Una combinación equilibrada de flores tropicales y vainilla suave con notas profundas de café recién molido. Floral con carácter, dulce y con fuerza aromática.",
+          ingredientesImg: "assets/ingredientes/africa/vainilla-ylang-cafe.jpg",
+          detalles: ["Notas de Salida: Ylang-Ylang", "Notas de Corazón: Vainilla Dulce", "Notas de Fondo: Café"]
+        },
+        "Flor de Loto y Sándalo": {
+          corta: "Equilibrio entre serenidad floral y base amaderada exótica.",
+          larga: "Una esencia calmante que mezcla la pureza del loto con la calidez del sándalo, evocando paz y equilibrio.",
+          ingredientesImg: "assets/ingredientes/africa/loto-sandalo.jpg",
+          detalles: ["Notas de Salida: Flor de Loto", "Notas de Corazón: Tilo", "Notas de Fondo: Sándalo"]
+        },
+        "Vainilla Madagascar y Café": {
+          corta: "Conexión entre lo suave y lo intenso, de espíritu africano.",
+          larga: "La suavidad de la vainilla se une al carácter del café africano en una fragancia de confort y fuerza.",
+          ingredientesImg: "assets/ingredientes/africa/vainilla-cafe.jpg",
+          detalles: ["Notas de Salida: Vainilla", "Notas de Corazón: Café", "Notas de Fondo: Caramelo"]
+        },
+        "Ylang-Ylang y Jazmín": {
+          corta: "Notas florales voluptuosas con un toque oriental.",
+          larga: "El Ylang-Ylang resalta su dulzura con el jazmín en una mezcla cálida y seductora.",
+          ingredientesImg: "assets/ingredientes/africa/ylang-jazmin.jpg",
+          detalles: ["Notas de Salida: Jazmín", "Notas de Corazón: Ylang-Ylang", "Notas de Fondo: Almizcle"]
+        },
+        "Frutas, madera y vainilla": {
+          corta: "Cítricos brillantes sobre fondo de canela, ámbar y café.",
+          larga: "Un equilibrio entre lo cítrico, lo especiado y lo dulce. Notas de canela, ámbar, café y vainilla en una mezcla profunda.",
+          ingredientesImg: "assets/ingredientes/africa/frutas-madera-vainilla.jpg",
+          detalles: ["Notas de Salida: Cítricos", "Notas de Corazón: Canela, Café", "Notas de Fondo: Ámbar, Vainilla"]
+        },
+        "Ámbar Rojo, Musk y Jazmín": {
+          corta: "Inspiración egipcia: denso, místico y sofisticado.",
+          larga: "Inspirada en Egipto, combina flores, resinas y maderas para una fragancia de lujo oriental con alma africana.",
+          ingredientesImg: "assets/ingredientes/africa/ambar-rojo.jpg",
+          detalles: ["Notas de Salida: Jazmín, Rosa", "Notas de Corazón: Ámbar Rojo", "Notas de Fondo: Sándalo, Musk"]
+        },
+        "Canela, Miel y Vainilla": {
+          corta: "Dulzura especiada, evocando calor y hogar.",
+          larga: "Notas doradas de miel con canela y un fondo cálido de vainilla, ideal para ambientes reconfortantes.",
+          ingredientesImg: "assets/ingredientes/africa/canela-miel-vainilla.jpg",
+          detalles: ["Notas de Salida: Canela", "Notas de Corazón: Miel", "Notas de Fondo: Vainilla"]
+        },
+        "Ylang-Ylang, Jazmín y Sándalo": {
+          corta: "Floral cálido con un fondo amaderado sensual.",
+          larga: "Flores exóticas que se funden en una base cremosa de sándalo, evocando atardeceres tropicales.",
+          ingredientesImg: "assets/ingredientes/africa/ylang-jazmin-sandalo.jpg",
+          detalles: ["Notas de Salida: Ylang-Ylang", "Notas de Corazón: Jazmín", "Notas de Fondo: Sándalo"]
+        },
+        "Naranja y Canela": {
+          corta: "Brillante mezcla de frescura cítrica y especia vibrante.",
+          larga: "Una fusión energizante de cítricos y canela que despierta el espíritu y alegra el ambiente.",
+          ingredientesImg: "assets/ingredientes/africa/naranja-canela.jpg",
+          detalles: ["Notas de Salida: Naranja", "Notas de Corazón: Canela", "Notas de Fondo: Ámbar"]
+        }
+      },
+
+      america: {
+        "Café y Cacao": {
+          corta: "Intenso y envolvente, como un tostado recién molido con fondo de chocolate.",
+          larga: "Café tostado y cacao puro se mezclan en una fragancia cálida y reconfortante, con espíritu latino.",
+          ingredientesImg: "assets/ingredientes/america/cafe-cacao.jpg",
+          detalles: ["Notas de Salida: Café Tostado", "Notas de Corazón: Cacao", "Notas de Fondo: Vainilla"]
+        },
+        "Vainilla y Caramelo": {
+          corta: "Dulzor cremoso y reconfortante, ideal para ambientes cálidos.",
+          larga: "El caramelo tostado y la vainilla se funden en un perfume gourmand de textura suave y deliciosa.",
+          ingredientesImg: "assets/ingredientes/america/vainilla-caramelo.jpg",
+          detalles: ["Notas de Salida: Azúcar Tostado", "Notas de Corazón: Caramelo", "Notas de Fondo: Vainilla"]
+        },
+        "Manzana y Canela": {
+          corta: "Hogar al instante: fruta roja y especias suaves.",
+          larga: "La manzana roja y la canela se combinan para dar una sensación cálida de hogar y dulzura.",
+          ingredientesImg: "assets/ingredientes/america/manzana-canela.jpg",
+          detalles: ["Notas de Salida: Manzana Roja", "Notas de Corazón: Canela", "Notas de Fondo: Vainilla"]
+        },
+        "Vainilla y Coco": {
+          corta: "Tropical dulce con final cremoso.",
+          larga: "Notas de coco suave y vainilla blanca crean un perfume cálido y luminoso.",
+          ingredientesImg: "assets/ingredientes/america/vainilla-coco.jpg",
+          detalles: ["Notas de Salida: Coco", "Notas de Corazón: Vainilla", "Notas de Fondo: Leche"]
+        },
+        "Café y Caramelo": {
+          corta: "Gourmand moderno: amargor amable y azúcar tostada.",
+          larga: "Café suave con un toque de azúcar caramelizada, moderno y acogedor.",
+          ingredientesImg: "assets/ingredientes/america/cafe-caramelo.jpg",
+          detalles: ["Notas de Salida: Café", "Notas de Corazón: Caramelo", "Notas de Fondo: Azúcar Tostado"]
+        },
+        "Frutos Rojos y Canela": {
+          corta: "Bayas jugosas con chispa especiada.",
+          larga: "Bayas frescas con un toque de canela que aportan energía y color al ambiente.",
+          ingredientesImg: "assets/ingredientes/america/frutosrojos-canela.jpg",
+          detalles: ["Notas de Salida: Frutos Rojos", "Notas de Corazón: Canela", "Notas de Fondo: Vainilla"]
+        },
+        "Caramelo y Chocolate": {
+          corta: "Postre goloso, denso y elegante.",
+          larga: "Un perfume de postre con matices de cacao y azúcar tostada.",
+          ingredientesImg: "assets/ingredientes/america/caramelo-chocolate.jpg",
+          detalles: ["Notas de Salida: Caramelo", "Notas de Corazón: Chocolate", "Notas de Fondo: Almendra"]
+        },
+        "Café y Canela": {
+          corta: "Cuerpo cafetero con especias cálidas.",
+          larga: "Una mezcla cálida de café suave y canela aromática que invita al descanso.",
+          ingredientesImg: "assets/ingredientes/america/cafe-canela.jpg",
+          detalles: ["Notas de Salida: Café", "Notas de Corazón: Canela", "Notas de Fondo: Cardamomo"]
+        },
+        "Chocolate y Limón": {
+          corta: "Contraste brillante: cacao profundo con cítrico fresco.",
+          larga: "El cacao oscuro se ilumina con un toque de limón, creando una fusión sorprendente.",
+          ingredientesImg: "assets/ingredientes/america/chocolate-limon.jpg",
+          detalles: ["Notas de Salida: Limón", "Notas de Corazón: Chocolate Amargo", "Notas de Fondo: Vainilla"]
+        },
+        "Frutos Tropicales y Cítricos": {
+          corta: "Vibrante, jugosa y luminosa; espíritu latino en estado puro.",
+          larga: "Piña, mango y cítricos frescos para una sensación de vitalidad y alegría.",
+          ingredientesImg: "assets/ingredientes/america/tropicales-citricos.jpg",
+          detalles: ["Notas de Salida: Piña, Mango", "Notas de Corazón: Cítricos", "Notas de Fondo: Coco"]
+        }
+      },
+
+      europa: {
+        "Vainilla Francesa y Lavanda": {
+          corta: "Suavidad floral con fondo dulce y cremoso.",
+          larga: "Equilibrio entre la dulzura de la vainilla y la calma floral de la lavanda francesa.",
+          ingredientesImg: "assets/ingredientes/europa/vainilla-lavanda.jpg",
+          detalles: ["Notas de Salida: Lavanda Francesa", "Notas de Corazón: Vainilla", "Notas de Fondo: Almizcle Blanco"]
+        },
+        "Rosas Búlgaras, Vainilla y Lavanda": {
+          corta: "Romántico y atemporal, puro perfume europeo.",
+          larga: "Rosas suaves con lavanda y un fondo dulce de vainilla mediterránea.",
+          ingredientesImg: "assets/ingredientes/europa/rosas-bulgaras.jpg",
+          detalles: ["Notas de Salida: Rosas Búlgaras", "Notas de Corazón: Lavanda", "Notas de Fondo: Vainilla"]
+        },
+        "Chocolate y Vainilla": {
+          corta: "Placer gourmand con notas amaderadas sutiles.",
+          larga: "La calidez del chocolate europeo combinada con la suavidad de la vainilla francesa.",
+          ingredientesImg: "assets/ingredientes/europa/chocolate-vainilla.jpg",
+          detalles: ["Notas de Salida: Chocolate", "Notas de Corazón: Vainilla", "Notas de Fondo: Pachulí"]
+        },
+        "Azahar de Naranjo y Miel": {
+          corta: "Refrescante y cálido a la vez, típico del Mediterráneo.",
+          larga: "Perfume floral con notas de miel y flores de naranjo, típico del Mediterráneo.",
+          ingredientesImg: "assets/ingredientes/europa/azahar-miel.jpg",
+          detalles: ["Notas de Salida: Azahar", "Notas de Corazón: Miel", "Notas de Fondo: Cítricos"]
+        },
+        "Rosas, Peonías y Limón Dulce": {
+          corta: "Floral chispeante con toque cítrico femenino.",
+          larga: "Flores europeas luminosas con un toque chispeante de limón dulce.",
+          ingredientesImg: "assets/ingredientes/europa/rosas-peonias.jpg",
+          detalles: ["Notas de Salida: Limón Dulce", "Notas de Corazón: Rosas, Peonías", "Notas de Fondo: Sándalo"]
+        },
+        "Bergamota": {
+          corta: "Notas frescas y elegantes, símbolo de pureza.",
+          larga: "Clásico cítrico europeo con notas limpias y sofisticadas.",
+          ingredientesImg: "assets/ingredientes/europa/bergamota.jpg",
+          detalles: ["Notas de Salida: Bergamota", "Notas de Corazón: Neroli", "Notas de Fondo: Madera de Cedro"]
+        },
+        "Limón y Azúcar (Limoncello)": {
+          corta: "Cítrico dulce, festivo y luminoso.",
+          larga: "Inspirada en el sur de Italia, un aroma festivo y veraniego.",
+          ingredientesImg: "assets/ingredientes/europa/limoncello.jpg",
+          detalles: ["Notas de Salida: Limón", "Notas de Corazón: Azúcar Tostado", "Notas de Fondo: Ron"]
+        },
+        "Té Verde, Jazmín y Pimienta": {
+          corta: "Brisa portuguesa: luminosa y sofisticada.",
+          larga: "Una fusión luminosa inspirada en Portugal: fresca, elegante y moderna.",
+          ingredientesImg: "assets/ingredientes/europa/teverde.jpg",
+          detalles: ["Notas de Salida: Té Verde", "Notas de Corazón: Jazmín", "Notas de Fondo: Pimienta"]
+        },
+        "Vainilla, Patchouli y Azúcar Tostado": {
+          corta: "Fondo goloso con elegancia griega.",
+          larga: "Fragancia griega intensa con toques dulces y maderas cálidas.",
+          ingredientesImg: "assets/ingredientes/europa/vainilla-patchouli.jpg",
+          detalles: ["Notas de Salida: Azúcar Tostado", "Notas de Corazón: Vainilla", "Notas de Fondo: Pachulí"]
+        },
+        "Lavanda, Ylang-Ylang y Jazmín": {
+          corta: "Floral delicado con equilibrio entre calma y alegría.",
+          larga: "Floral delicado con notas mediterráneas de calma y vitalidad.",
+          ingredientesImg: "assets/ingredientes/europa/lavanda-ylang.jpg",
+          detalles: ["Notas de Salida: Lavanda", "Notas de Corazón: Ylang-Ylang", "Notas de Fondo: Jazmín"]
+        },
+        "Naranja, Jazmín y Sándalo": {
+          corta: "Armonía soleada y mediterránea.",
+          larga: "Una fusión de flores y maderas suaves con un aire soleado.",
+          ingredientesImg: "assets/ingredientes/europa/naranja-jazmin.jpg",
+          detalles: ["Notas de Salida: Naranja", "Notas de Corazón: Jazmín", "Notas de Fondo: Sándalo"]
+        },
+        "Coco, Vainilla, Azúcar Tostado y Ámbar": {
+          corta: "Sensual y envolvente, dulzor con profundidad ámbar.",
+          larga: "Inspirada en Grecia: mezcla gourmand con profundidad ámbar.",
+          ingredientesImg: "assets/ingredientes/europa/coco-vainilla.jpg",
+          detalles: ["Notas de Salida: Coco, Azúcar Tostado", "Notas de Corazón: Vainilla", "Notas de Fondo: Ámbar"]
+        },
+        "Eucalipto": {
+          corta: "Nota fresca y limpia, europea y atemporal.",
+          larga: "Nota fresca y purificante con espíritu europeo clásico.",
+          ingredientesImg: "assets/ingredientes/europa/eucalipto.jpg",
+          detalles: ["Notas de Salida: Eucalipto", "Notas de Corazón: Menta", "Notas de Fondo: Notas Verdes"]
+        }
+      },
+
+      asia: {
+        "Benjuí, Sándalo dulce y Rosas": {
+          corta: "Floral ambarado con toque balsámico, delicado y místico.",
+          larga: "Rosas suaves sobre un fondo amaderado y cálido. Fragancia equilibrada y espiritual.",
+          ingredientesImg: "assets/ingredientes/asia/benjui-rosas.jpg",
+          detalles: ["Notas de Salida: Rosas", "Notas de Corazón: Benjuí", "Notas de Fondo: Sándalo Dulce"]
+        },
+        "Jazmín, Tilo y Magnolias": {
+          corta: "Equilibrio entre frescura floral y suavidad oriental.",
+          larga: "Flores blancas elegantes que evocan paz interior y serenidad oriental.",
+          ingredientesImg: "assets/ingredientes/asia/jazmin-tilo-magnolia.jpg",
+          detalles: ["Notas de Salida: Jazmín", "Notas de Corazón: Tilo, Magnolias", "Notas de Fondo: Almizcle"]
+        },
+        "Peras, Manzanas y Flores Blancas": {
+          corta: "Fragancia luminosa con notas de jardín en flor.",
+          larga: "Una combinación fresca y luminosa que recuerda jardines húmedos al amanecer.",
+          ingredientesImg: "assets/ingredientes/asia/peras-manzanas.jpg",
+          detalles: ["Notas de Salida: Peras, Manzanas", "Notas de Corazón: Flores Blancas", "Notas de Fondo: Almizcle"]
+        },
+        "Amapolas y Gardenias": {
+          corta: "Fondo elegante, suave y sensual.",
+          larga: "Floral intensa que combina amapolas silvestres con gardenias aterciopeladas.",
+          ingredientesImg: "assets/ingredientes/asia/amapolas-gardenias.jpg",
+          detalles: ["Notas de Salida: Amapolas", "Notas de Corazón: Gardenias", "Notas de Fondo: Vainilla"]
+        },
+        "Benjuí y Tilo": {
+          corta: "Ambarado y fresco, una fusión de espiritualidad y calma.",
+          larga: "Perfume armonioso de resina y flor que invita al descanso.",
+          ingredientesImg: "assets/ingredientes/asia/benjui-tilo.jpg",
+          detalles: ["Notas de Salida: Benjuí", "Notas de Corazón: Tilo", "Notas de Fondo: Sándalo"]
+        },
+        "Flor de Loto y Sándalo": {
+          corta: "Paz y pureza con fondo levemente ahumado.",
+          larga: "Equilibrio entre la serenidad floral del loto y la base cálida del sándalo.",
+          ingredientesImg: "assets/ingredientes/asia/loto-sandalo.jpg",
+          detalles: ["Notas de Salida: Flor de Loto", "Notas de Corazón: Tilo", "Notas de Fondo: Sándalo"]
+        },
+        "Jazmín Chino y Tilo": {
+          corta: "Floral etéreo y refinado con alma oriental.",
+          larga: "Notas orientales suaves de jazmín con el equilibrio del tilo.",
+          ingredientesImg: "assets/ingredientes/asia/jazmin-chino.jpg",
+          detalles: ["Notas de Salida: Jazmín Chino", "Notas de Corazón: Tilo", "Notas de Fondo: Almizcle"]
+        },
+        "Madreselva y Jazmín": {
+          corta: "Dulce, radiante y femenina.",
+          larga: "Una fragancia suave y primaveral que transmite romanticismo y frescura.",
+          ingredientesImg: "assets/ingredientes/asia/madreselva-jazmin.jpg",
+          detalles: ["Notas de Salida: Madreselva", "Notas de Corazón: Jazmín", "Notas de Fondo: Notas Verdes"]
+        },
+        "Gardenia y Tilo": {
+          corta: "Natural, fresco y de elegancia atemporal.",
+          larga: "Un floral blanco equilibrado que aporta luz y pureza.",
+          ingredientesImg: "assets/ingredientes/asia/gardenia-tilo.jpg",
+          detalles: ["Notas de Salida: Gardenia", "Notas de Corazón: Tilo", "Notas de Fondo: Almizcle"]
+        },
+        "Flores Blancas y Citrus": {
+          corta: "Limpia y brillante, con chispa cítrica.",
+          larga: "Flores delicadas con un toque cítrico que aporta vitalidad.",
+          ingredientesImg: "assets/ingredientes/asia/flores-citrus.jpg",
+          detalles: ["Notas de Salida: Citrus", "Notas de Corazón: Flores Blancas", "Notas de Fondo: Tilo"]
+        },
+        "Té Verde, Jazmín y Pimienta": {
+          corta: "Toque vibrante y herbal con chispa especiada.",
+          larga: "Una mezcla oriental que une frescura, sofisticación y un toque especiado.",
+          ingredientesImg: "assets/ingredientes/asia/teverde-jazmin.jpg",
+          detalles: ["Notas de Salida: Té Verde", "Notas de Corazón: Jazmín", "Notas de Fondo: Pimienta"]
+        }
+      },
+
+      oceania: {
+        "Coco y Coral Ocean": {
+          corta: "Dulce y salino se entrelazan en una brisa oceánica limpia y envolvente.",
+          larga: "Evoca playas cristalinas, con frescura marina y coco cremoso.",
+          ingredientesImg: "assets/ingredientes/oceania/coco-coral.jpg",
+          detalles: ["Notas de Salida: Sal marina, bergamota", "Notas de Corazón: Coco, flor de tiaré", "Notas de Base: Sándalo, almizcle blanco"]
+        },
+        "Eucalipto y Coco": {
+          corta: "Equilibrio perfecto entre frescura herbal y suavidad tropical.",
+          larga: "El aroma del eucalipto australiano con un toque cremoso de coco.",
+          ingredientesImg: "assets/ingredientes/oceania/eucalipto-coco.jpg",
+          detalles: ["Notas de Salida: Eucalipto, menta", "Notas de Corazón: Coco, hoja de té", "Notas de Base: Cedro, almizcle"]
+        },
+        "Ylang-Ylang (Jazmín, Gardenia)": {
+          corta: "Exótica y elegante, flor blanca con alma de verano.",
+          larga: "Flores blancas exóticas que aportan elegancia y serenidad.",
+          ingredientesImg: "assets/ingredientes/oceania/ylang-gardenia.jpg",
+          detalles: ["Notas de Salida: Ylang-Ylang", "Notas de Corazón: Jazmín, Gardenia", "Notas de Fondo: Sándalo"]
+        },
+        "Gardenia del Pacífico": {
+          corta: "Ligera, floral y brillante como una mañana junto al mar.",
+          larga: "Una fragancia suave y natural como una brisa oceánica.",
+          ingredientesImg: "assets/ingredientes/oceania/gardenia-pacifico.jpg",
+          detalles: ["Notas de Salida: Acordes Marinos", "Notas de Corazón: Gardenia", "Notas de Fondo: Sándalo"]
+        },
+        "Lemongrass y Bamboo Verde": {
+          corta: "Refrescante y vivaz, ideal para revitalizar los espacios.",
+          larga: "Cítricos verdes y hierbas frescas para un ambiente energizante.",
+          ingredientesImg: "assets/ingredientes/oceania/lemongrass-bamboo.jpg",
+          detalles: ["Notas de Salida: Lemongrass", "Notas de Corazón: Bamboo Verde", "Notas de Fondo: Pachulí"]
+        }
+      },
+
+      caribe: {
+        "Reina de la Noche y Coco": {
+          corta: "Exótica y luminosa, con la dulzura del trópico.",
+          larga: "Flores intensas que se mezclan con el coco fresco en una fragancia cálida y relajada.",
+          ingredientesImg: "assets/ingredientes/caribe/reina-coco.jpg",
+          detalles: ["Notas de Salida: Reina de la Noche", "Notas de Corazón: Coco", "Notas de Fondo: Almizcle"]
+        },
+        "Reina de la Noche y Vainilla": {
+          corta: "Elegante, suave y seductora, con fondo cálido.",
+          larga: "Una combinación cremosa y elegante, con notas tropicales y fondo dulce.",
+          ingredientesImg: "assets/ingredientes/caribe/reina-vainilla.jpg",
+          detalles: ["Notas de Salida: Reina de la Noche", "Notas de Corazón: Vainilla", "Notas de Fondo: Ámbar"]
+        },
+        "Orquídea Negra y Coco": {
+          corta: "Compleja y sofisticada, con notas florales y frutales.",
+          larga: "Perfume complejo con acordes frutales, florales y un fondo de coco suave.",
+          ingredientesImg: "assets/ingredientes/caribe/orquidea-coco.jpg",
+          detalles: ["Notas de Salida: Frutas Tropicales", "Notas de Corazón: Orquídea Negra", "Notas de Fondo: Coco"]
+        },
+        "Orquídea Negra y Magnolia": {
+          corta: "Floral intensa con fondo aterciopelado.",
+          larga: "Una fusión floral que transmite sofisticación y dulzura tropical.",
+          ingredientesImg: "assets/ingredientes/caribe/orquidea-magnolia.jpg",
+          detalles: ["Notas de Salida: Magnolia", "Notas de Corazón: Orquídea Negra", "Notas de Fondo: Vainilla"]
+        },
+        "Coco y Canela": {
+          corta: "Mezcla cálida de dulzura tropical y especia sutil.",
+          larga: "Un equilibrio entre dulzura tropical y especias suaves.",
+          ingredientesImg: "assets/ingredientes/caribe/coco-canela.jpg",
+          detalles: ["Notas de Salida: Coco", "Notas de Corazón: Canela", "Notas de Fondo: Azúcar"]
+        },
+        "Lemon Sugar": {
+          corta: "Refrescante, chispeante y juvenil.",
+          larga: "Una mezcla chispeante de limón azucarado que despierta los sentidos.",
+          ingredientesImg: "assets/ingredientes/caribe/lemon-sugar.jpg",
+          detalles: ["Notas de Salida: Limón", "Notas de Corazón: Azúcar", "Notas de Fondo: Vainilla"]
+        },
+        "Sandía y Melón": {
+          corta: "Frutal fresco que despierta alegría.",
+          larga: "Una explosión jugosa de frutas de verano con fondo dulce.",
+          ingredientesImg: "assets/ingredientes/caribe/sandia-melon.jpg",
+          detalles: ["Notas de Salida: Sandía", "Notas de Corazón: Melón", "Notas de Fondo: Notas de Agua"]
+        },
+        "Coco y Lima": {
+          corta: "Vibrante equilibrio entre lo cremoso y lo cítrico.",
+          larga: "Coco tropical equilibrado con el toque ácido de la lima verde.",
+          ingredientesImg: "assets/ingredientes/caribe/coco-lima.jpg",
+          detalles: ["Notas de Salida: Lima", "Notas de Corazón: Coco", "Notas de Fondo: Azúcar"]
+        },
+        "Mango y Flor de Tiaré": {
+          corta: "Solar, sensual y profundamente veraniega.",
+          larga: "Inspirada en los paraísos polinesios, mezcla mango maduro con flor de tiaré.",
+          ingredientesImg: "assets/ingredientes/caribe/mango-tiare.jpg",
+          detalles: ["Notas de Salida: Mango", "Notas de Corazón: Flor de Tiaré", "Notas de Fondo: Vainilla"]
+        }
+      },
+
+      oriente: {
+        "Rosas de Damasco, Miel y Sándalo": {
+          corta: "Opulento y sensual, un clásico oriental.",
+          larga: "El alma oriental en una fragancia que combina dulzura y misterio.",
+          ingredientesImg: "assets/ingredientes/oriente/rosas-miel.jpg",
+          detalles: ["Notas de Salida: Rosas de Damasco", "Notas de Corazón: Miel Dorada", "Notas de Fondo: Sándalo"]
+        },
+        "Naranja, Pimienta y Canela": {
+          corta: "Brillante, picante y cálido: energía pura.",
+          larga: "Cítricos energéticos con fondo especiado; alegre y elegante.",
+          ingredientesImg: "assets/ingredientes/oriente/naranja-canela.jpg",
+          detalles: ["Notas de Salida: Naranja", "Notas de Corazón: Pimienta", "Notas de Fondo: Canela"]
+        },
+        "Café y Canela": {
+          corta: "Intenso y dulce con un fondo especiado envolvente.",
+          larga: "Una combinación cálida y especiada con la intensidad del café oriental.",
+          ingredientesImg: "assets/ingredientes/oriente/cafe-canela.jpg",
+          detalles: ["Notas de Salida: Café", "Notas de Corazón: Canela", "Notas de Fondo: Cardamomo"]
+        },
+        "Ámbar y Especias de Arabia": {
+          corta: "Rico, profundo y majestuoso.",
+          larga: "Fragancia densa con resinas y un blend de especias exóticas que evocan los mercados árabes.",
+          ingredientesImg: "assets/ingredientes/oriente/ambar-especias.jpg",
+          detalles: ["Notas de Salida: Especias", "Notas de Corazón: Ámbar", "Notas de Fondo: Incienso"]
+        },
+        "Incienso y Vainilla Oriental": {
+          corta: "Espiritual y cálido; equilibrio de misticismo y dulzura.",
+          larga: "El humo sagrado del incienso combinado con la dulzura profunda y envolvente de la vainilla oriental.",
+          ingredientesImg: "assets/ingredientes/oriente/incienso-vainilla.jpg",
+          detalles: ["Notas de Salida: Incienso", "Notas de Corazón: Vainilla", "Notas de Fondo: Sándalo"]
+        }
+      },
+
+      ocasiones: {
+        "Vainilla, Chocolate y Almendras Dulces": {
+          corta: "Tradicional, goloso y reconfortante. El abrazo dulce de la temporada.",
+          larga: "Un blend tradicional que combina dulzura y especias típicas de la temporada. Ideal para recrear el espíritu de las fiestas.",
+          ingredientesImg: "assets/ingredientes/ocasiones/navidad1.jpg",
+          detalles: ["Notas de Salida: Almendras Dulces", "Notas de Corazón: Chocolate", "Notas de Fondo: Vainilla"]
+        },
+        "Naranja, Canela, Jengibre y Nuez Moscada": {
+          corta: "Especia brillante y cítrica que perfuma el invierno.",
+          larga: "La combinación clásica de especias invernales con un toque brillante y festivo de naranja.",
+          ingredientesImg: "assets/ingredientes/ocasiones/navidad2.jpg",
+          detalles: ["Notas de Salida: Naranja, Jengibre", "Notas de Corazón: Canela, Nuez Moscada", "Notas de Fondo: Clavo"]
+        },
+        "Galletas y Especias Navideñas": {
+          corta: "Dulce y festiva; recuerda a la repostería casera.",
+          larga: "Recrea el perfume de la cocina navideña: galletas, azúcar y especias cálidas como la canela y la nuez moscada.",
+          ingredientesImg: "assets/ingredientes/ocasiones/navidad3.jpg",
+          detalles: ["Notas de Salida: Azúcar Morena", "Notas de Corazón: Galleta", "Notas de Fondo: Canela"]
+        },
+        "Pino, Caramelo y Menta": {
+          corta: "Refrescante y luminoso: la versión fresca de la Navidad.",
+          larga: "Una fusión que combina la frescura del pino con la dulzura del caramelo y un toque de menta navideña.",
+          ingredientesImg: "assets/ingredientes/ocasiones/navidad4.jpg",
+          detalles: ["Notas de Salida: Pino", "Notas de Corazón: Menta", "Notas de Fondo: Caramelo"]
+        },
+        "Citronella y Lemongrass": {
+          corta: "Fresca y cítrica, ideal para tardes al aire libre.",
+          larga: "Una esencia veraniega que combina citronella natural y lemongrass para mantener ambientes frescos y limpios.",
+          ingredientesImg: "assets/ingredientes/ocasiones/verano1.jpg",
+          detalles: ["Notas de Salida: Lemongrass", "Notas de Corazón: Citronella", "Notas de Fondo: Notas Verdes"]
+        },
+        "Lima y Verbena": {
+          corta: "Chispeante, herbal y luminosa; puro verano.",
+          larga: "Fragancia refrescante con toques verdes de verbena y lima que revitalizan el ambiente.",
+          ingredientesImg: "assets/ingredientes/ocasiones/verano2.jpg",
+          detalles: ["Notas de Salida: Lima", "Notas de Corazón: Verbena", "Notas de Fondo: Menta"]
+        },
+        "Coco y Flor de Loto": {
+          corta: "Dulce, floral y tropical: la esencia del descanso.",
+          larga: "La suavidad del coco se mezcla con la flor de loto para evocar días soleados y relajados.",
+          ingredientesImg: "assets/ingredientes/ocasiones/verano3.jpg",
+          detalles: ["Notas de Salida: Flor de Loto", "Notas de Corazón: Coco", "Notas de Fondo: Sándalo"]
+        }
+      }
+    };
+
+    // =======================================================
+    // 1. CARRITO DE COMPRAS
+    // =======================================================
+    let CARRITO = [];
+
+    function agregarAlCarrito(nombreEsencia, envaseKey) {
+      const envase = ENVASES_DATA[envaseKey];
+      if (!envase) {
+        alert("Seleccioná un envase válido.");
+        return;
+      }
+
+      const item = {
+        esencia: nombreEsencia,
+        envase: envase.nombre,
+        precio: envase.precio,
+        img: envase.img
+      };
+
+      CARRITO.push(item);
+      actualizarCarrito();
+    }
+
+
+    function actualizarCarrito() {
+      const lista = document.getElementById("carritoLista");
+      const totalElem = document.getElementById("carritoTotal");
+      const countElem = document.getElementById("carritoCount");
+
+      if (!lista || !totalElem) return;
+
+      lista.innerHTML = "";
+      let total = 0;
+
+      CARRITO.forEach((item, i) => {
+        total += item.precio;
+        lista.innerHTML += `
+      <div class="item-carrito">
+        <img src="${item.img}" alt="${item.envase}">
+          <div>
+            <p><strong>${item.esencia}</strong></p>
+            <p>${item.envase}</p>
+            <p>$${item.precio.toLocaleString("es-AR")}</p>
+            <button onclick="eliminarDelCarrito(${i})">❌ Quitar</button>
+          </div>
+      </div>`;
+      });
+      totalElem.textContent = `$${total.toLocaleString("es-AR")}`;
+      if (countElem) {
+        countElem.textContent = CARRITO.length;
+        // animación visual (opcional)
+        countElem.style.transform = "scale(1.3)";
+        setTimeout(() => (countElem.style.transform = "scale(1)"), 200);
+      }
+    }
+
+    function eliminarDelCarrito(index) {
+      CARRITO.splice(index, 1);
+      actualizarCarrito();
+    };
+
+    //=========================================
+    //  EVENTOS PRINCIPALES
+    //=========================================
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const vaciar = document.getElementById("vaciarCarrito");
+      const finalizar = document.getElementById("finalizarCompra");
+      const pagoSection = document.getElementById("pagoSection");
+
+      if (vaciar) {
+        vaciar.addEventListener("click", () => {
+          if (confirm("¿Vaciar todo el carrito?")) {
+            CARRITO = [];
+            actualizarCarrito();
+            pagoSection.style.display = "none";
+          }
+        });
+      }
+
+      if (finalizar) {
+        finalizar.addEventListener("click", () => {
+          if (CARRITO.length === 0) {
+            alert("Tu carrito está vacío.");
+            return;
+          }
+          // Mostrar bloque de pago
+          pagoSection.style.display = "block";
+          pagoSection.scrollIntoView({ behavior: "smooth" });
+        });
+      }
+    });
+
+    function confirmarPago() {
+      const medio = document.querySelector('input[name="medioPago"]:checked').value;
+      const total = document.getElementById("carritoTotal").textContent;
+      const pagoConfirmado = document.getElementById("pagoConfirmado");
+
+      pagoConfirmado.style.display = "block";
+      pagoConfirmado.innerHTML = `
+    <h4>✅ Pago confirmado</h4>
+    <p>Elegiste pagar con <strong>${medio.toUpperCase()}</strong> por un total de <strong>${total}</strong>.</p>
+    <p>Tu pedido está siendo procesado. ¡Gracias por elegir Aromas Bon Voyage!</p>
+  `;
+
+      setTimeout(() => {
+        CARRITO = [];
+        actualizarCarrito();
+        pagoConfirmado.style.display = "none";
+        document.getElementById("pagoSection").style.display = "none";
+        showSection("inicio");
+      }, 5000);
+      const logo = document.getElementById("logo");
+      if (logo) {
+        logo.addEventListener("click", () => {
+          showSection("inicio"); // o la función que uses para volver al inicio
+          window.scrollTo({ top: 0, behavior: "smooth" }); // sube suavemente
+        });
+      }
+    }
+
+
+
+    // =======================================================
+    // 2. NAVEGACIÓN Y FUNCIONES PRINCIPALES
+    // =======================================================
+    const bg = document.getElementById('bg');
+    const pages = [...document.querySelectorAll('.pagina')];
+    const volverBtnFicha = document.querySelector('#fichaEsencia .volver');
+
+    // Elementos de la ficha de esencia
+    const fichaEsencia = document.getElementById('fichaEsencia');
+    fichaEsencia.style.display = 'none';
+    const fichaEsenciaNombre = document.getElementById('fichaEsenciaNombre');
+    const fichaEsenciaCorta = document.getElementById('fichaEsenciaCorta');
+    const fichaEsenciaDetalles = document.getElementById('fichaEsenciaDetalles');
+
+    // Elementos dinámicos del envase
+    const envaseSelector = document.getElementById('envaseSelector');
+    const envasePreviewImg = document.getElementById('fichaEsenciaImg');
+    const envaseDesc = document.getElementById('envaseDesc');
+    const envasePrecio = document.getElementById('envasePrecio');
+
+    function setBackground(url) {
+      bg.style.setProperty('--bg', `url('${url}')`);
+      bg.classList.add('fade');
+      setTimeout(() => bg.classList.remove('fade'), 850);
+    }
+
+    function showSection(id) {
+      // Si es inicio → mostrar hero + secciones principales
+      if (id === 'inicio') {
+        pages.forEach(p => {
+          // Ocultamos siempre la ficha de compra
+          if (p.id === 'fichaEsencia') {
+            p.style.display = 'none';
+            p.classList.remove('activa');
+          }
+          // Mostramos el inicio y las secciones principales
+          else if (['inicio', 'quienes', 'colecciones', 'ocasiones', 'contacto'].includes(p.id)) {
+            p.style.display = 'block';
+            p.classList.add('activa');
+          }
+          // Cualquier otra cosa queda oculta
+          else {
+            p.style.display = 'none';
+            p.classList.remove('activa');
+          }
+        });
+      }
+      else {
+        // Para el resto de secciones: mostrar solo la elegida
+        pages.forEach(p => {
+          if (p.id === id) {
+            p.style.display = 'block';
+            p.classList.add('activa');
+          } else {
+            p.style.display = 'none';
+            p.classList.remove('activa');
+          }
+        });
+      }
+
+      // Cambiar fondo
+      const target = document.getElementById(id);
+      const image = target?.getAttribute('data-bg') || 'fondo.jpg';
+      setBackground(image);
+
+      // Scroll al inicio
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Actualizar estado del menú
+      document.querySelectorAll('.main-nav a').forEach(a => {
+        a.classList.toggle('activa', a.getAttribute('data-nav') === id);
+      });
+    }
+
+
+    // =======================================================
+    // 3. LÓGICA DE DETALLE DE ESENCIA CON SELECTOR DE ENVASE
+    // =======================================================
+    function updateEnvasePreview(key) {
+      const data = ENVASES_DATA[key];
+      if (!data) return;
+      envasePreviewImg.src = data.img;
+      envasePreviewImg.alt = data.nombre;
+      envasePrecio.textContent = `$${data.precio.toLocaleString('es-ES')}`;
+      envaseDesc.textContent = data.desc;
+    }
+
+    function handleEnvaseChange() {
+      updateEnvasePreview(envaseSelector.value);
+      // Cambiar el fondo de la página de ficha al envase actual
+      fichaEsencia.setAttribute('data-bg', ENVASES_DATA[envaseSelector.value].img);
+      setBackground(ENVASES_DATA[envaseSelector.value].img);
+    }
+
+    function initializeEnvaseSelector() {
+      envaseSelector.innerHTML = '';
+      for (const key in ENVASES_DATA) {
+        const option = document.createElement('option');
+        option.value = key;
+        option.textContent = ENVASES_DATA[key].nombre;
+        envaseSelector.appendChild(option);
+      }
+      envaseSelector.removeEventListener('change', handleEnvaseChange);
+      envaseSelector.addEventListener('change', handleEnvaseChange);
+    }
+
+    function showEsenciaDetail(continente, nombreEsencia) {
+      const esencia = ESENCIAS[continente] ? ESENCIAS[continente][nombreEsencia] : null;
+      if (!esencia) {
+        console.error('Esencia no encontrada:', continente, nombreEsencia);
+        return;
+      }
+      const btnAgregar = document.getElementById('btnAgregarCarrito');
+      if (btnAgregar) {
+        btnAgregar.onclick = () => {
+          const envaseKey = envaseSelector?.value;
+          if (!envaseKey) {
+            alert("Elegí un envase.");
+            return;
+          }
+          agregarAlCarrito(nombreEsencia, envaseKey);
+          showSection('carrito'); // si no querés que navegue, borrá esta línea
+        };
+      }
+
+
+
+      // 1. Cargar Datos de la Esencia
+      fichaEsenciaNombre.textContent = nombreEsencia;
+      fichaEsenciaCorta.textContent = esencia.corta;
+
+      // 2. Cargar Detalles del Aroma
+      fichaEsenciaDetalles.innerHTML = '';
+      const detalles = esencia.detalles || [];
+      if (detalles.length > 0) {
+        detalles.forEach(detalle => {
+          const li = document.createElement('li');
+          li.textContent = detalle;
+          fichaEsenciaDetalles.appendChild(li);
+        });
+      } else {
+        fichaEsenciaDetalles.innerHTML = '<li>No hay detalles específicos de notas para este aroma.</li>';
+      }
+
+      // 3. Inicializar Selector de Envase y mostrar el primero por defecto
+      initializeEnvaseSelector();
+      const defaultEnvaseKey = Object.keys(ENVASES_DATA)[0];
+      if (defaultEnvaseKey) {
+        envaseSelector.value = defaultEnvaseKey;
+        updateEnvasePreview(defaultEnvaseKey);
+      }
+
+      // 4. Actualizar botón "Volver"
+      const parentSection = (continente === 'ocasiones' || continente === 'navidad' || continente === 'verano') ? 'ocasiones' : continente;
+      volverBtnFicha.setAttribute('data-nav', parentSection);
+      volverBtnFicha.href = `#${parentSection}`;
+
+      // 5. Mostrar la sección, usando la imagen del envase por defecto para el fondo
+      fichaEsencia.setAttribute('data-bg', ENVASES_DATA[defaultEnvaseKey].img);
+      showSection('fichaEsencia');
+    }
+
+    // =======================================================
+    // 4. INICIALIZACIÓN DE LISTENERS
+    // =======================================================
+    document.addEventListener('DOMContentLoaded', () => {
+      // (A) NavLinks (menú principal y botones 'volver')
+      const navLinks = [...document.querySelectorAll('[data-nav]')];
+
+      navLinks.forEach(a => {
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          const to = a.getAttribute('data-nav');
+          if (to) showSection(to);
+        });
+      });
+
+      // (B) Cards de Continentes / Ocasiones (Nivel 1 -> Nivel 2)
+      const continentCards = [...document.querySelectorAll('.card[data-goto]')];
+      continentCards.forEach(card => {
+        const clickHandler = (ev) => {
+          ev.preventDefault();
+          const to = card.getAttribute('data-goto');
+          if (to) showSection(to);
+        };
+        card.addEventListener('click', clickHandler);
+        card.addEventListener('keydown', (ev) => {
+          if (ev.key === 'Enter' || ev.key === ' ') clickHandler(ev);
+        });
+      });
+
+      // (C) Tarjetas de esencia (Nivel 2 -> Ficha detalle)
+      document.querySelectorAll('.card-simple').forEach(card => {
+        const clickHandler = (ev) => {
+          ev.preventDefault();
+          const continente = card.getAttribute('data-continente');
+          const esencia = card.getAttribute('data-esencia');
+          if (continente && esencia) showEsenciaDetail(continente, esencia);
+        };
+        card.addEventListener('click', clickHandler);
+        card.addEventListener('keydown', (ev) => {
+          if (ev.key === 'Enter' || ev.key === ' ') clickHandler(ev);
+        });
+      });
+
+      // (D) Lógica de Contacto (email/whatsapp)
+      const form = document.getElementById('contactoForm');
+      const campoEmail = document.getElementById('campoEmail');
+      const campoWhats = document.getElementById('campoWhatsApp');
+      const radios = [...document.querySelectorAll('input[name="contacto"]')];
+      const msg = document.getElementById('formMsg');
+
+      function toggleCampos() {
+        const val = radios.find(r => r.checked)?.value;
+        if (val === 'email') {
+          campoEmail.style.display = 'block';
+          campoWhats.style.display = 'none';
+          document.getElementById('email').setAttribute('required', 'required');
+          document.getElementById('whatsapp').removeAttribute('required');
+        } else if (val === 'whatsapp') {
+          campoWhats.style.display = 'block';
+          campoEmail.style.display = 'none';
+          document.getElementById('whatsapp').setAttribute('required', 'required');
+          document.getElementById('email').removeAttribute('required');
+        } else {
+          campoEmail.style.display = 'none';
+          campoWhats.style.display = 'none';
+          document.getElementById('email').removeAttribute('required');
+          document.getElementById('whatsapp').removeAttribute('required');
+        }
+      }
+      radios.forEach(r => r.addEventListener('change', toggleCampos));
+
+      form.addEventListener('submit', (e) => {
+        msg.textContent = '';
+        const nombre = document.getElementById('nombre').value.trim();
+        const contacto = radios.find(r => r.checked)?.value;
+
+        if (!nombre) {
+          e.preventDefault();
+          msg.textContent = 'Por favor, ingresá tu nombre.';
+          return;
+        }
+        if (!contacto) {
+          e.preventDefault();
+          msg.textContent = 'Elegí si querés que te contactemos por Email o WhatsApp.';
+          return;
+        }
+        if (contacto === 'email') {
+          const email = document.getElementById('email').value.trim();
+          if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+            e.preventDefault();
+            msg.textContent = 'Ingresá un email válido.';
+            return;
+          }
+        }
+        if (contacto === 'whatsapp') {
+          const tel = document.getElementById('whatsapp').value.trim();
+          if (!tel || tel.length < 6) {
+            e.preventDefault();
+            msg.textContent = 'Ingresá un WhatsApp válido.';
+            return;
+          }
+        }
+        msg.textContent = 'Enviando…';
+      });
+
+      // (E) Estado inicial
+      showSection('inicio');
+    });
+  </script>
+</body>
+
+</html>

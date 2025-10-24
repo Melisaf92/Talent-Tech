@@ -1,0 +1,1187 @@
+/*
+ * ----------------------------------------
+ * 1. Base y Tipografía
+ * ----------------------------------------
+ */
+:root {
+    --color-primary: #FF7A33; /* Naranja principal */
+    --color-secondary: #F5DEB3; /* Beige suave */
+    --color-text: #333333;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-overlay: rgba(0, 0, 0, 0.4);
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    /* CLAVE: Aseguramos el fondo blanco para todo el body */
+    background-color: var(--color-white) !important; 
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    color: var(--color-primary);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #A0522D;
+}
+
+/*
+ * ----------------------------------------
+ * 2. Estructura General y Navegación
+ * ----------------------------------------
+ */
+.section.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.container.narrow {
+    max-width: 700px;
+}
+
+/* Fondo Dinámico con DIFUMINADO */
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-image: var(--bg);
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.8s ease-in-out;
+    filter: blur(8px); /* Blur fuerte */
+    transform: scale(1.05); 
+}
+
+#bg.fade {
+    opacity: 0.7;
+}
+
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+/* HEADER */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    /* Logo más grande */
+    height: 120px; 
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.main-nav a {
+    margin-left: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+    padding: 0.5rem 0;
+}
+
+.main-nav a:hover,
+.main-nav a.activa {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+/* Páginas */
+.pagina {
+    display: none;
+}
+
+.pagina.activa {
+    display: block;
+}
+
+#fichaEsencia {
+    display: none;
+}
+
+/*
+ * ----------------------------------------
+ * 3. Hero - INICIO
+ * ----------------------------------------
+ */
+#inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  background: transparent;
+}
+
+.hero-center {
+  background-color: rgba(0, 0, 0, 0.45);
+  color: var(--color-white);
+  padding: 3rem 4rem;
+  border-radius: 15px;
+  max-width: 850px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  margin: auto;
+}
+
+.hero-center h1 {
+  font-size: 5rem; 
+  color: var(--color-white);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  margin-bottom: 1rem;
+}
+
+.hero-center p {
+  font-size: 1.5rem;
+  max-width: 650px;
+  margin: 0 auto 1.8rem;
+  color: #f5f5f5;
+  line-height: 1.7;
+}
+
+.btn-hero {
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  padding: 0.9rem 2.5rem;
+  font-size: 1rem;
+  box-shadow: 0 6px 18px rgba(255, 122, 51, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+  background-color: #E96A28;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(233, 106, 40, 0.5);
+}
+
+/*
+ * ----------------------------------------
+ * 4. QUIÉNES SOMOS
+ * ----------------------------------------
+ */
+#quienes {
+    background-color: var(--color-white);
+    color: var(--color-text);
+    padding: 5rem 0 7rem;
+}
+
+.container.quienes-contenido {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex; 
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.quienes-texto {
+    flex: 1; 
+    max-width: 600px;
+}
+
+.proceso-imagenes {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+    background-color: var(--color-primary);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.quienes-texto h2 {
+    text-align: left; 
+    margin-left: 0; 
+}
+
+.quienes-texto p {
+    font-size: 1.2rem;
+    max-width: none; 
+    margin: 1rem 0; 
+    text-align: left; 
+}
+
+.img-proceso-collage {
+    width: 100%;
+    max-height: 650px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.caption {
+    color: var(--color-white); 
+}
+
+/*
+ * ----------------------------------------
+ * 5. COLECCIONES
+ * ----------------------------------------
+ */
+#colecciones {
+    background-color: var(--color-white);
+    padding: 6rem 0 8rem;
+    position: relative; 
+    z-index: 2;
+}
+
+#colecciones .grid-continentes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--color-white);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/*
+ * ----------------------------------------
+ * 6. ESENCIAS — CONTIENTE Y TARJETAS
+ * ----------------------------------------
+ */
+
+/* ==================== HERO DE CONTINENTE (MODIFICADO) ==================== */
+.encabezado-continente {
+  position: relative;
+  width: 100%;
+  /* Altura fija y usamos flexbox para posicionar el texto en la parte baja */
+  height: 60vh; 
+  padding: 0; 
+  
+  /* CLAVE: Overlay MÁS OSCURO (90%) para máximo contraste con el texto naranja */
+  background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), 
+              var(--hero) center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Empuja el contenido hacia la parte inferior del Hero */
+  justify-content: flex-end; 
+  text-align: center;
+  overflow: hidden;
+  border-bottom-left-radius: 80px 40px;
+  border-bottom-right-radius: 80px 40px;
+  z-index: 10; 
+}
+
+/* Contenedor interno del Hero del continente (para control de contenido) */
+.hero-cont {
+    /* CLAVE: Empieza el contenido debajo del encabezado fijo (aprox 80px de altura del header + margen) */
+    padding-top: 8rem; 
+    padding-bottom: 3rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+    /* Asegura que este contenedor use toda la altura disponible en el flex (justify-content: flex-end) */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* CLAVE: SELECTORES REFORZADOS CON !important */
+.encabezado-continente h1 { 
+  font-family: 'Playfair Display', serif;
+  /* CLAVE: Color NARANJA PRIMARIO forzado */
+  color: var(--color-primary) !important; 
+  font-size: 4.5rem; 
+  /* CLAVE: Sombra BLANCA para que el naranja resalte del fondo negro */
+  text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.4); 
+  margin-bottom: 1.5rem; 
+  position: relative;
+  z-index: 12; 
+}
+
+.encabezado-continente p {
+  color: #f5f5f5 !important; /* blanco cálido */
+  font-size: 1.6rem; 
+  max-width: 800px;
+  line-height: 1.6;
+  margin: 0 auto;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6); /* sombra oscura para contraste */
+  position: relative;
+  z-index: 12;
+}
+
+/* HERO DIFERENTE PARA CADA CONTINENTE (Definido en JS/HTML) */
+
+/* ==================== CONTENEDOR DE ESENCIAS (CLAVE) ==================== */
+.section.container .esencias {
+    position: relative; 
+    z-index: 2;
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 15px;
+    /* CLAVE: Ajustamos el margen negativo para que se solape sin cortar el Hero */
+    margin-top: -60px; 
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05); /* Sombra para simular elevación */
+}
+
+.esencias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: left;
+    margin-top: 3rem;
+}
+
+/* ==================== TARJETAS INDIVIDUALES (MODIFICADO) ==================== */
+.card-simple {
+    background-color: var(--color-white);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    display: block;
+    border: 1px solid #eee;
+}
+
+.card-simple:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+/* CLAVE: OCULTAR LA IMAGEN DE LA ESENCIA */
+.card-simple img {
+    display: none; 
+}
+
+.card-simple h4 {
+    color: var(--color-primary); 
+    margin-bottom: 0.5rem;
+}
+
+.card-simple p {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    float: none; 
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 2.5rem;
+    text-decoration: none;
+    background-color: var(--color-primary); 
+    color: var(--color-white); 
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.volver:hover {
+    background-color: #E96A28; 
+    color: var(--color-white);
+}
+
+/* ----------------------------------------
+ * 7. OCASIONES (adaptado a tu HTML)
+ * ----------------------------------------
+ */
+#ocasiones {
+  position: relative;
+  background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.95)),
+              url("fondo.jpg") center/cover no-repeat;
+  padding: 6rem 0 8rem;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Título */
+#ocasiones h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #b8945f; /* dorado suave */
+  margin-bottom: 3rem;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Contenedor general */
+#ocasiones .grid-ocasiones {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Tarjetas */
+#ocasiones .card {
+  background: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  overflow: hidden;
+  flex: 1 1 45%;
+  min-width: 320px;
+  max-width: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+#ocasiones .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* Imágenes */
+#ocasiones .card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: block;
+}
+
+/* Contenido */
+#ocasiones .card-content {
+  padding: 1.5rem 2rem;
+}
+
+#ocasiones .card-content h3 {
+  font-family: 'Playfair Display', serif;
+  color: #b8945f;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#ocasiones .card-content p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Efecto de enlace (solo si se usa link dentro) */
+#ocasiones .card-content a {
+  display: inline-block;
+  color: #b8945f;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-top: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+#ocasiones .card-content a:hover {
+  color: var(--color-primary);
+}
+
+/* ----------------------------------------
+ * FICHA DE ESENCIA — diseño refinado
+ * ----------------------------------------
+ */
+#fichaEsencia {
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95)),
+              url("fondo2.jpg") center/cover no-repeat;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 6rem 0 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.ficha-producto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ficha-producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* IMAGEN */
+.ficha-img-cont {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+#fichaEsenciaImg {
+  max-width: 85%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* DETALLES */
+.ficha-detalles {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.ficha-detalles h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: var(--color-primary);
+}
+
+.ficha-detalles .desc-corta {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+.ficha-detalles select {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  transition: border-color 0.3s;
+}
+
+.ficha-detalles select:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+/* LISTA DE NOTAS */
+.ficha-detalles ul {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.ficha-detalles ul li {
+  margin-bottom: 0.4rem;
+  color: #444;
+  list-style: "✨ ";
+}
+
+/* BOTONES */
+.volver {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(255, 122, 51, 0.3);
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.volver:hover {
+  background-color: #E96A28;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(233, 106, 40, 0.5);
+}
+
+/* BOTÓN DE COMPRA */
+.btn-add {
+  background-color: #fff;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 25px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  margin-top: 0.8rem;
+}
+
+.btn-add:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+#btnAgregarCarrito.btn.btn-primary {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.icono-carrito {
+  font-size: 20px;
+  position: relative;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+
+#carritoCount {
+  background-color: #ff6f3c;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 6px;
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .ficha-producto {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .ficha-img-cont,
+  .ficha-detalles {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .ficha-detalles {
+    align-items: center;
+  }
+
+  .ficha-detalles h2 {
+    font-size: 1.8rem;
+  }
+
+  .ficha-detalles ul {
+    text-align: left;
+  }
+}
+
+/* ----------------------------------------
+* CONTACTO  * 
+----------------------------------------
+*/
+#contacto {
+  position: relative;
+  background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.92)),
+              url("Images/quienes2.jpg") center/cover no-repeat;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 6rem 0 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+}
+
+/* TÍTULO */
+#contacto h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 2.5rem;
+  text-align: center;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* CONTENEDOR */
+.container.narrow {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid var(--color-primary);
+  border-radius: 20px;
+  padding: 3rem 3.5rem;
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container.narrow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* FORMULARIO */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(255, 122, 51, 0.2);
+  outline: none;
+}
+
+/* RADIO GROUP */
+fieldset.preferencia {
+  border: none;
+  margin: 1rem 0 1rem;
+  width: 100%;
+}
+
+fieldset.preferencia legend {
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.6rem;
+}
+
+fieldset.preferencia label {
+  margin-right: 1.5rem;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+}
+
+fieldset.preferencia input[type="radio"] {
+  accent-color: var(--color-primary);
+  margin-right: 0.4rem;
+}
+
+/* CAMPOS OCULTOS */
+.campo-oculto {
+  display: none;
+}
+
+/* BOTÓN */
+.contact-form .btn {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 0.9rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(255, 122, 51, 0.3);
+}
+
+.contact-form .btn:hover {
+  background-color: #E96A28;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(233, 106, 40, 0.5);
+}
+
+/* MENSAJE FINAL */
+.form-msg {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-msg.success {
+  color: green;
+}
+
+.form-msg.error {
+  color: red;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #contacto h2 {
+    font-size: 2.4rem;
+  }
+  .container.narrow {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/*
+ * ----------------------------------------
+ * 10. FOOTER
+ * ----------------------------------------
+ */
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    width: 100%;
+    border-top: 3px solid #555;
+    margin-top: auto;
+    position: relative;
+    z-index: 2;
+}
+
+/*
+ * ----------------------------------------
+ * 11. RESPONSIVE
+ * ----------------------------------------
+ */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.8rem 1rem;
+    }
+
+    .main-nav {
+        margin-top: 0.8rem;
+    }
+
+    .main-nav a {
+        margin-left: 0;
+        margin-right: 0.8rem;
+        display: inline-block;
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    .hero-center h1 {
+        font-size: 3rem;
+    }
+
+    .hero-center p {
+        font-size: 1rem; 
+    }
+    
+    .encabezado-continente h1 {
+        font-size: 3rem; 
+    }
+    
+    .encabezado-continente p {
+        font-size: 1.2rem; 
+    }
+
+    .esencias {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        margin-top: 0;
+    }
+
+    .ficha-producto {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .ficha-img-cont,
+    .ficha-detalles {
+        width: 100%;
+    }
+}
+
+    /* Centrar títulos y textos dentro de las tarjetas de Colecciones */
+#colecciones .card .card-content{
+  text-align: center;
+  padding: 1rem 1.25rem; /* opcional, mantiene aire */
+}
+
+#colecciones .card .card-content h3,
+#colecciones .card .card-content p,
+#colecciones .card .card-content a{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Si el título es link (subrayado), que el subrayado quede prolijo */
+#colecciones .card .card-content a{
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+/* === FIX: centrar títulos (y texto) de las tarjetas en COLECCIONES === */
+#colecciones .grid-continentes .card .card-content{
+  text-align: center !important;
+}
+
+#colecciones .grid-continentes .card .card-content h3,
+#colecciones .grid-continentes .card .card-content p,
+#colecciones .grid-continentes .card .card-content a{
+  display: block;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* === FORZAR CENTRADO DE TÍTULOS Y DESCRIPCIONES EN COLECCIONES === */
+#colecciones .grid-continentes .card {
+  text-align: center !important;       /* centra todo el contenido de la tarjeta */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#colecciones .grid-continentes .card h3,
+#colecciones .grid-continentes .card h4,
+#colecciones .grid-continentes .card p,
+#colecciones .grid-continentes .card a {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100%;
+  display: block;
+}
+
+/* Opcional: ajusta la separación entre el título y el texto */
+#colecciones .grid-continentes .card h3,
+#colecciones .grid-continentes .card h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Refuerzo máximo para centrar títulos en colecciones */
+#colecciones .card h3, 
+#colecciones .card p {
+  width: 100%;
+  text-align: center !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+  display: block !important;
+}
+/* === FIX FINAL — Centrar títulos y textos en tarjetas de COLECCIONES === */
+#colecciones .grid-continentes .card {
+  text-align: center !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#colecciones .grid-continentes .card h3,
+#colecciones .grid-continentes .card h4,
+#colecciones .grid-continentes .card p,
+#colecciones .grid-continentes .card a {
+  text-align: center !important;
+  margin: 0 auto !important;
+  width: 100%;
+  display: block;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* === FIX FINAL: color correcto solo para la descripción del continente === */
+.encabezado-continente p {
+  color: #f5f5f5 !important; /* blanco cálido */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+/* === FIX DEFINITIVO: color de descripción del hero en blanco === */
+.encabezado-continente p,
+.hero-cont p {
+  color: #ffffff !important; /* blanco puro */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+/* === Fondo difuminado para la sección COLECCIONES === */
+#colecciones {
+  position: relative;
+  background: url("fondo2.jpg") center/cover no-repeat;
+  padding: 6rem 0 8rem;
+  z-index: 2;
+  overflow: hidden; /* evita desbordes */
+}
+
+/* Capa difuminada encima del fondo */
+#colecciones::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.6); /* capa blanca translúcida */
+  backdrop-filter: blur(6px); /* difuminado real */
+  -webkit-backdrop-filter: blur(6px); /* soporte para Safari */
+  z-index: 0;
+}
+
+/* Asegura que el contenido quede arriba del difuminado */
+#colecciones .grid-continentes,
+#colecciones h2 {
+  position: relative;
+  z-index: 1;
+}
+
+/* === FONDO DIFUMINADO IGUAL QUE COLECCIONES === */
+#ocasiones {
+  position: relative;
+  background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9)),
+              url("fondo2.jpg") center/cover no-repeat;
+  backdrop-filter: blur(6px); /* efecto de difuminado suave */
+  -webkit-backdrop-filter: blur(6px);
+  padding: 6rem 0 8rem;
+  z-index: 2;
+  text-align: center;
+}
+
+/* ======== CARRITO DE COMPRAS ======== */
+#carrito {
+  text-align: center;
+  background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.9)), url('Images/fondo.jpg') center/cover fixed;
+  backdrop-filter: blur(4px);
+  border-radius: 15px;
+  padding: 4rem 2rem;
+}
+
+.carrito-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.item-carrito {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.item-carrito img {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.item-carrito button {
+  margin-top: 0.5rem;
+  background: #ff7a33;
+  border: none;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.item-carrito button:hover {
+  background: #e96a28;
+}
+
+.carrito-total {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+
+
