@@ -24,6 +24,6 @@ Todo el flujo ocurre dentro de un **único archivo HTML**, utilizando JavaScript
 ## Tecnologías utilizadas
 - **HTML5** – estructura semántica y accesible.  
 - **CSS3** – diseño responsivo, animaciones suaves, sombras y estilos tipo boutique.  
-- **JavaScript (Vanilla)** – manejo de interacción entre secciones y simulación de flujo de compra.  
+- **JavaScript** – manejo de interacción entre secciones y simulación de flujo de compra.  
 - **Flexbox y Grid** – organización visual de mosaicos y fichas.  
 
