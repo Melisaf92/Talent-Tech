@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bon Voyage · Aromas del Mundo</title>
+  <title>Bon Voyage Aromas del Mundo</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
     rel="stylesheet">
@@ -23,15 +23,18 @@
       <img src="logo1.jpg" alt="Bon Voyage" id="logo" class="logo" />
     </div>
     <nav class="main-nav">
-      <a href="#inicio" data-nav="inicio" class="activa">Inicio</a>
-      <a href="#quienes" data-nav="quienes">Quiénes Somos</a>
-      <a href="#colecciones" data-nav="colecciones">Colecciones</a>
-      <a href="#ocasiones" data-nav="ocasiones">Ediciones Limitadas</a>
-      <a href="#contacto" data-nav="contacto">Contacto</a>
-      <a href="#carrito" data-nav="carrito" id="iconoCarrito" class="icono-carrito">
-        🛒 <span id="carritoCount">0</span>
-      </a>
-
+      <ul class="nav-list">
+        <li><a href="#inicio" data-nav="inicio">Inicio</a></li>
+        <li><a href="#quienes" data-nav="quienes">Quiénes Somos</a></li>
+        <li><a href="#colecciones" data-nav="colecciones">Colecciones</a></li>
+        <li><a href="#ediciones" data-nav="ediciones">Ediciones Limitadas</a></li>
+        <li><a href="#contacto" data-nav="contacto">Contacto</a></li>
+        <li>
+          <a href="#carrito" class="icono-carrito" data-nav="carrito">
+            🛒<span id="carritoCount">0</span>
+          </a>
+        </li>
+      </ul>
     </nav>
   </header>
 
@@ -40,11 +43,31 @@
     <section id="inicio" class="pagina activa" data-bg="fondo.jpg">
       <div class="hero hero-center">
         <h1>Bon Voyage · Aromas del Mundo</h1>
+        <p id="apiTexto" class="frase-viajera"></p>
         <p>Velas artesanales de cera de soja que transforman cada espacio en un viaje sensorial.<br>
           Inspiradas en destinos del mundo, creadas a mano con amor.</p>
         <a class="btn-hero" href="#colecciones" data-nav="colecciones">Descubrí nuestras colecciones</a>
       </div>
     </section>
+
+    <!-- Carrusel de Reseñas (sección aparte, pero solo visible en Inicio) -->
+    <div class="resenas-wrapper">
+     <section id="resenas" class="pagina resenas-home" data-bg="fondo.jpg">
+        <h2>Reseñas</h2>
+          <div class="resenas-carousel">
+            <button class="carousel-btn prev" id="resPrev" aria-label="Reseña anterior">‹</button>
+              <div class="resenas-ventana">
+                <div class="resenas-track" id="resenasTrack">
+                  <!-- Slides dinámicos -->
+                </div>
+              </div>
+              <button class="carousel-btn next" id="resNext" aria-label="Reseña siguiente">›</button>
+          </div>
+        <div class="resenas-dots" id="resenasDots">
+        <!-- Puntitos dinámicos -->
+      </section>
+    </div>
+
 
     <!-- QUIÉNES SOMOS -->
     <section id="quienes" class="pagina" data-bg="Images/quienes2.jpg">
@@ -69,7 +92,6 @@
           <div class="galeria-proceso">
             <img src="pasos.jpg" alt="Proceso Artesanal de Velas" class="img-proceso-collage">
           </div>
-          <p></strong>
           <p class="caption">El proceso artesanal garantiza la calidad y larga duración de cada vela Bon Voyage.</p>
         </div>
       </div>
@@ -135,11 +157,11 @@
       </div>
     </section>
 
-    <!-- OCASIONES (Nivel 1 paralelo) -->
-    <section id="ocasiones" class="pagina" data-bg="fondo.jpg">
+    <!-- ediciones (Nivel 1 paralelo) -->
+    <section id="ediciones" class="pagina" data-bg="fondo.jpg">
       <div class="container">
-        <h2>Ocasiones Especiales</h2>
-        <div class="grid-ocasiones">
+        <h2>Ediciones Limitadas</h2>
+        <div class="grid-ediciones">
           <div class="card" role="button" tabindex="0" data-goto="navidad" data-bg="Continentes/Navidad/navidad.jpg">
             <img src="Continentes/Navidad/navidad.jpg" alt="Navidad">
             <div class="card-content">
@@ -237,7 +259,8 @@
     </section>
 
     <!-- AMÉRICA -->
-    <section id="america" class="pagina" data-bg="Continentes/América/WhatsApp Image 2021-12-07 at 00.46.19 (1).jpeg">
+    <section id="america" class="pagina"
+      data-bg="Continentes/América/WhatsApp Image 2021-12-07 at 00.46.19 (1).jpeg">
       <header class="hero-cont">
         <div class="hero-inner">
           <h1>América</h1>
@@ -343,8 +366,8 @@
             <h4>Azahar de Naranjo y Miel</h4>
             <p>Refrescante y cálido a la vez, típico del Mediterráneo.</p>
           </article>
-          <article class="card-simple" data-continente="europa" data-esencia="Rosas, Peonías y Limón Dulce" tabindex="0"
-            role="link">
+          <article class="card-simple" data-continente="europa" data-esencia="Rosas, Peonías y Limón Dulce"
+            tabindex="0" role="link">
             <img src="assets/ingredientes/europa/rosas-peonias.jpg" alt="Rosas, Peonías y Limón Dulce">
             <h4>Rosas, Peonías y Limón Dulce</h4>
             <p>Floral chispeante con toque cítrico femenino.</p>
@@ -384,8 +407,8 @@
             <h4>Naranja, Jazmín y Sándalo</h4>
             <p>Armonía soleada y mediterránea.</p>
           </article>
-          <article class="card-simple" data-continente="europa" data-esencia="Coco, Vainilla, Azúcar Tostado y Ámbar"
-            tabindex="0" role="link">
+          <article class="card-simple" data-continente="europa"
+            data-esencia="Coco, Vainilla, Azúcar Tostado y Ámbar" tabindex="0" role="link">
             <img src="assets/ingredientes/europa/coco-vainilla.jpg" alt="Coco, Vainilla, Azúcar Tostado y Ámbar">
             <h4>Coco, Vainilla, Azúcar Tostado y Ámbar</h4>
             <p>Sensual y envolvente, dulzor con profundidad ámbar.</p>
@@ -571,8 +594,8 @@
             <h4>Reina de la Noche y Coco</h4>
             <p>Exótica y luminosa, con la dulzura del trópico.</p>
           </article>
-          <article class="card-simple" data-continente="caribe" data-esencia="Reina de la Noche y Vainilla" tabindex="0"
-            role="link">
+          <article class="card-simple" data-continente="caribe" data-esencia="Reina de la Noche y Vainilla"
+            tabindex="0" role="link">
             <img src="assets/ingredientes/caribe/reina-vainilla.jpg" alt="Reina de la Noche y Vainilla">
             <h4>Reina de la Noche y Vainilla</h4>
             <p>Elegante, suave y seductora, con fondo cálido.</p>
@@ -674,32 +697,32 @@
       </header>
       <div class="section container">
         <div class="esencias grid-dos">
-          <article class="card-simple" data-continente="ocasiones" data-esencia="Vainilla, Chocolate y Almendras Dulces"
+          <article class="card-simple" data-continente="ediciones" data-esencia="Vainilla, Chocolate y Almendras Dulces"
             tabindex="0" role="link">
-            <img src="assets/ingredientes/ocasiones/navidad1.jpg" alt="Vainilla, Chocolate y Almendras Dulces">
+            <img src="assets/ingredientes/ediciones/navidad1.jpg" alt="Vainilla, Chocolate y Almendras Dulces">
             <h4>Vainilla, Chocolate y Almendras Dulces</h4>
             <p>Tradicional, goloso y reconfortante. El abrazo dulce de la temporada.</p>
           </article>
-          <article class="card-simple" data-continente="ocasiones"
+          <article class="card-simple" data-continente="ediciones"
             data-esencia="Naranja, Canela, Jengibre y Nuez Moscada" tabindex="0" role="link">
-            <img src="assets/ingredientes/ocasiones/navidad2.jpg" alt="Naranja, Canela, Jengibre y Nuez Moscada">
+            <img src="assets/ingredientes/ediciones/navidad2.jpg" alt="Naranja, Canela, Jengibre y Nuez Moscada">
             <h4>Naranja, Canela, Jengibre y Nuez Moscada</h4>
             <p>Especia brillante y cítrica que perfuma el invierno.</p>
           </article>
-          <article class="card-simple" data-continente="ocasiones" data-esencia="Galletas y Especias Navideñas"
+          <article class="card-simple" data-continente="ediciones" data-esencia="Galletas y Especias Navideñas"
             tabindex="0" role="link">
-            <img src="assets/ingredientes/ocasiones/navidad3.jpg" alt="Galletas y Especias Navideñas">
+            <img src="assets/ingredientes/ediciones/navidad3.jpg" alt="Galletas y Especias Navideñas">
             <h4>Galletas y Especias Navideñas</h4>
             <p>Dulce y festiva; recuerda a la repostería casera.</p>
           </article>
-          <article class="card-simple" data-continente="ocasiones" data-esencia="Pino, Caramelo y Menta" tabindex="0"
+          <article class="card-simple" data-continente="ediciones" data-esencia="Pino, Caramelo y Menta" tabindex="0"
             role="link">
-            <img src="assets/ingredientes/ocasiones/navidad4.jpg" alt="Pino, Caramelo y Menta">
+            <img src="assets/ingredientes/ediciones/navidad4.jpg" alt="Pino, Caramelo y Menta">
             <h4>Pino, Caramelo y Menta</h4>
             <p>Refrescante y luminoso: la versión fresca de la Navidad.</p>
           </article>
         </div>
-        <a class="volver" href="#ocasiones" data-nav="ocasiones">← Volver a ocasiones</a>
+        <a class="volver" href="#ediciones" data-nav="ediciones">← Volver a ediciones</a>
       </div>
     </section>
 
@@ -713,26 +736,26 @@
       </header>
       <div class="section container">
         <div class="esencias grid-dos">
-          <article class="card-simple" data-continente="ocasiones" data-esencia="Citronella y Lemongrass" tabindex="0"
+          <article class="card-simple" data-continente="ediciones" data-esencia="Citronella y Lemongrass" tabindex="0"
             role="link">
-            <img src="assets/ingredientes/ocasiones/verano1.jpg" alt="Citronella y Lemongrass">
+            <img src="assets/ingredientes/ediciones/verano1.jpg" alt="Citronella y Lemongrass">
             <h4>Citronella y Lemongrass</h4>
             <p>Fresca y cítrica, ideal para tardes al aire libre.</p>
           </article>
-          <article class="card-simple" data-continente="ocasiones" data-esencia="Lima y Verbena" tabindex="0"
+          <article class="card-simple" data-continente="ediciones" data-esencia="Lima y Verbena" tabindex="0"
             role="link">
-            <img src="assets/ingredientes/ocasiones/verano2.jpg" alt="Lima y Verbena">
+            <img src="assets/ingredientes/ediciones/verano2.jpg" alt="Lima y Verbena">
             <h4>Lima y Verbena</h4>
             <p>Chispeante, herbal y luminosa; puro verano.</p>
           </article>
-          <article class="card-simple" data-continente="ocasiones" data-esencia="Coco y Flor de Loto" tabindex="0"
+          <article class="card-simple" data-continente="ediciones" data-esencia="Coco y Flor de Loto" tabindex="0"
             role="link">
-            <img src="assets/ingredientes/ocasiones/verano3.jpg" alt="Coco y Flor de Loto">
+            <img src="assets/ingredientes/ediciones/verano3.jpg" alt="Coco y Flor de Loto">
             <h4>Coco y Flor de Loto</h4>
             <p>Dulce, floral y tropical: la esencia del descanso.</p>
           </article>
         </div>
-        <a class="volver" href="#ocasiones" data-nav="ocasiones">← Volver a ocasiones</a>
+        <a class="volver" href="#ediciones" data-nav="ediciones">← Volver a ediciones</a>
       </div>
     </section>
 
@@ -740,7 +763,7 @@
     <section id="contacto" class="pagina" data-bg="fondo.jpg">
       <div class="container narrow">
         <h2>Contacto</h2>
-        <form action="https://formspree.io/f/mjvndzra" method="POST" class="contact-form" id="contactoForm" novalidate>
+        <form action="https://formspree.io/f/mvgebwvw" method="POST" class="contact-form" id="contactoForm" novalidate>
           <label for="nombre">Nombre*</label>
           <input type="text" id="nombre" name="nombre" required />
 
@@ -768,6 +791,7 @@
         </form>
       </div>
     </section>
+
     <!-- CARRITO DE COMPRAS -->
     <section id="carrito" class="pagina" data-bg="fondo.jpg">
       <div class="container narrow">
@@ -777,8 +801,8 @@
           <p>Total: <span id="carritoTotal">$0</span></p>
           <button id="vaciarCarrito" class="btn">Vaciar Carrito</button>
           <button id="finalizarCompra" class="btn btn-primary">Finalizar Compra</button>
+          <button id="continuarcomprando" class="btn btn-primary">Seguir Comprando</button>
         </div>
-      </div>
       </div>
       <!-- 🧾 Sección de pago -->
       <div id="pagoSection"
@@ -810,8 +834,6 @@
     // =======================================================
     // 1. DATOS (ENVASES Y ESENCIAS)
     // =======================================================
-    //CATÁLOGO COMPLETO DE ENVASES – AROMAS BON VOYAGE (Julio 2025)
-
     const ENVASES_DATA = {
       etoile: {
         nombre: "ÉTOILE",
@@ -935,6 +957,25 @@
       },
     };
 
+    const RESENAS_BASE = [
+      {
+        nombre: "Ana",
+        texto: "Las velas Europa son un viaje directo a la costa italiana. La de limoncello es mi favorita.",
+        rating: 5
+      },
+      {
+        nombre: "Lucía",
+        texto: "Compré la colección Caribe y fue un golazo para regalar. El aroma a mango y tiaré es espectacular.",
+        rating: 5
+      },
+      {
+        nombre: "Mariano",
+        texto: "La citronella de verano me salvó las noches en el balcón. Buen balance entre aroma y funcionalidad.",
+        rating: 4
+      }
+    ];
+
+    let RESENAS = [];
 
     const ESENCIAS = {
       africa: {
@@ -1336,47 +1377,47 @@
         }
       },
 
-      ocasiones: {
+      ediciones: {
         "Vainilla, Chocolate y Almendras Dulces": {
           corta: "Tradicional, goloso y reconfortante. El abrazo dulce de la temporada.",
           larga: "Un blend tradicional que combina dulzura y especias típicas de la temporada. Ideal para recrear el espíritu de las fiestas.",
-          ingredientesImg: "assets/ingredientes/ocasiones/navidad1.jpg",
+          ingredientesImg: "assets/ingredientes/ediciones/navidad1.jpg",
           detalles: ["Notas de Salida: Almendras Dulces", "Notas de Corazón: Chocolate", "Notas de Fondo: Vainilla"]
         },
         "Naranja, Canela, Jengibre y Nuez Moscada": {
           corta: "Especia brillante y cítrica que perfuma el invierno.",
           larga: "La combinación clásica de especias invernales con un toque brillante y festivo de naranja.",
-          ingredientesImg: "assets/ingredientes/ocasiones/navidad2.jpg",
+          ingredientesImg: "assets/ingredientes/ediciones/navidad2.jpg",
           detalles: ["Notas de Salida: Naranja, Jengibre", "Notas de Corazón: Canela, Nuez Moscada", "Notas de Fondo: Clavo"]
         },
         "Galletas y Especias Navideñas": {
           corta: "Dulce y festiva; recuerda a la repostería casera.",
           larga: "Recrea el perfume de la cocina navideña: galletas, azúcar y especias cálidas como la canela y la nuez moscada.",
-          ingredientesImg: "assets/ingredientes/ocasiones/navidad3.jpg",
+          ingredientesImg: "assets/ingredientes/ediciones/navidad3.jpg",
           detalles: ["Notas de Salida: Azúcar Morena", "Notas de Corazón: Galleta", "Notas de Fondo: Canela"]
         },
         "Pino, Caramelo y Menta": {
           corta: "Refrescante y luminoso: la versión fresca de la Navidad.",
           larga: "Una fusión que combina la frescura del pino con la dulzura del caramelo y un toque de menta navideña.",
-          ingredientesImg: "assets/ingredientes/ocasiones/navidad4.jpg",
+          ingredientesImg: "assets/ingredientes/ediciones/navidad4.jpg",
           detalles: ["Notas de Salida: Pino", "Notas de Corazón: Menta", "Notas de Fondo: Caramelo"]
         },
         "Citronella y Lemongrass": {
           corta: "Fresca y cítrica, ideal para tardes al aire libre.",
           larga: "Una esencia veraniega que combina citronella natural y lemongrass para mantener ambientes frescos y limpios.",
-          ingredientesImg: "assets/ingredientes/ocasiones/verano1.jpg",
+          ingredientesImg: "assets/ingredientes/ediciones/verano1.jpg",
           detalles: ["Notas de Salida: Lemongrass", "Notas de Corazón: Citronella", "Notas de Fondo: Notas Verdes"]
         },
         "Lima y Verbena": {
           corta: "Chispeante, herbal y luminosa; puro verano.",
           larga: "Fragancia refrescante con toques verdes de verbena y lima que revitalizan el ambiente.",
-          ingredientesImg: "assets/ingredientes/ocasiones/verano2.jpg",
+          ingredientesImg: "assets/ingredientes/ediciones/verano2.jpg",
           detalles: ["Notas de Salida: Lima", "Notas de Corazón: Verbena", "Notas de Fondo: Menta"]
         },
         "Coco y Flor de Loto": {
           corta: "Dulce, floral y tropical: la esencia del descanso.",
           larga: "La suavidad del coco se mezcla con la flor de loto para evocar días soleados y relajados.",
-          ingredientesImg: "assets/ingredientes/ocasiones/verano3.jpg",
+          ingredientesImg: "assets/ingredientes/ediciones/verano3.jpg",
           detalles: ["Notas de Salida: Flor de Loto", "Notas de Corazón: Coco", "Notas de Fondo: Sándalo"]
         }
       }
@@ -1405,7 +1446,6 @@
       actualizarCarrito();
     }
 
-
     function actualizarCarrito() {
       const lista = document.getElementById("carritoLista");
       const totalElem = document.getElementById("carritoTotal");
@@ -1432,7 +1472,6 @@
       totalElem.textContent = `$${total.toLocaleString("es-AR")}`;
       if (countElem) {
         countElem.textContent = CARRITO.length;
-        // animación visual (opcional)
         countElem.style.transform = "scale(1.3)";
         setTimeout(() => (countElem.style.transform = "scale(1)"), 200);
       }
@@ -1441,69 +1480,158 @@
     function eliminarDelCarrito(index) {
       CARRITO.splice(index, 1);
       actualizarCarrito();
-    };
+    }
 
     //=========================================
-    //  EVENTOS PRINCIPALES
+    //  RESEÑAS – STORAGE Y CARRUSEL
     //=========================================
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const vaciar = document.getElementById("vaciarCarrito");
-      const finalizar = document.getElementById("finalizarCompra");
-      const pagoSection = document.getElementById("pagoSection");
-
-      if (vaciar) {
-        vaciar.addEventListener("click", () => {
-          if (confirm("¿Vaciar todo el carrito?")) {
-            CARRITO = [];
-            actualizarCarrito();
-            pagoSection.style.display = "none";
-          }
-        });
-      }
-
-      if (finalizar) {
-        finalizar.addEventListener("click", () => {
-          if (CARRITO.length === 0) {
-            alert("Tu carrito está vacío.");
-            return;
-          }
-          // Mostrar bloque de pago
-          pagoSection.style.display = "block";
-          pagoSection.scrollIntoView({ behavior: "smooth" });
-        });
-      }
-    });
-
-    function confirmarPago() {
-      const medio = document.querySelector('input[name="medioPago"]:checked').value;
-      const total = document.getElementById("carritoTotal").textContent;
-      const pagoConfirmado = document.getElementById("pagoConfirmado");
-
-      pagoConfirmado.style.display = "block";
-      pagoConfirmado.innerHTML = `
-    <h4>✅ Pago confirmado</h4>
-    <p>Elegiste pagar con <strong>${medio.toUpperCase()}</strong> por un total de <strong>${total}</strong>.</p>
-    <p>Tu pedido está siendo procesado. ¡Gracias por elegir Aromas Bon Voyage!</p>
-  `;
-
-      setTimeout(() => {
-        CARRITO = [];
-        actualizarCarrito();
-        pagoConfirmado.style.display = "none";
-        document.getElementById("pagoSection").style.display = "none";
-        showSection("inicio");
-      }, 5000);
-      const logo = document.getElementById("logo");
-      if (logo) {
-        logo.addEventListener("click", () => {
-          showSection("inicio"); // o la función que uses para volver al inicio
-          window.scrollTo({ top: 0, behavior: "smooth" }); // sube suavemente
-        });
+    function cargarResenasDesdeStorage() {
+      try {
+        const guardadas = localStorage.getItem("resenasBonVoyage");
+        if (guardadas) {
+          RESENAS = JSON.parse(guardadas);
+        } else {
+          RESENAS = [...RESENAS_BASE];
+        }
+      } catch (e) {
+        RESENAS = [...RESENAS_BASE];
       }
     }
 
+    function guardarResenasEnStorage() {
+      try {
+        localStorage.setItem("resenasBonVoyage", JSON.stringify(RESENAS));
+      } catch (e) {
+        console.warn("No se pudieron guardar las reseñas en localStorage", e);
+      }
+    }
 
+    let resenaIndex = 0;
+    let resenaInterval = null;
+
+    function renderResenas() {
+      const track = document.getElementById("resenasTrack");
+      const dotsContainer = document.getElementById("resenasDots");
+      if (!track || !dotsContainer) return;
+
+      track.innerHTML = "";
+      dotsContainer.innerHTML = "";
+
+      if (RESENAS.length === 0) {
+        track.innerHTML = `
+          <div class="resena-slide resena-empty">
+            <p>Todavía no hay reseñas cargadas. ¡Sé la primera persona en dejar la tuya! ✨</p>
+          </div>`;
+        return;
+      }
+
+      RESENAS.forEach((r, index) => {
+        const slide = document.createElement("div");
+        slide.className = "resena-slide";
+
+        const inner = document.createElement("div");
+        inner.className = "resena-card";
+
+        const icon = document.createElement("div");
+        icon.className = "resena-icon";
+        icon.textContent = "❝";
+
+        const texto = document.createElement("p");
+        texto.className = "resena-texto";
+        texto.textContent = r.texto;
+
+        const footer = document.createElement("div");
+        footer.className = "resena-footer";
+
+        const nombre = document.createElement("span");
+        nombre.className = "resena-nombre";
+        nombre.textContent = r.nombre || "Anónimo";
+
+        const rating = document.createElement("span");
+        rating.className = "resena-rating";
+        rating.textContent = "⭐".repeat(r.rating || 0);
+
+        footer.appendChild(nombre);
+        footer.appendChild(rating);
+
+        inner.appendChild(icon);
+        inner.appendChild(texto);
+        inner.appendChild(footer);
+        slide.appendChild(inner);
+        track.appendChild(slide);
+
+        const dot = document.createElement("button");
+        dot.className = "resena-dot";
+        dot.setAttribute("type", "button");
+        dot.setAttribute("aria-label", `Ver reseña ${index + 1}`);
+        dot.addEventListener("click", () => {
+          goToResena(index);
+          resetResenaInterval();
+        });
+        dotsContainer.appendChild(dot);
+      });
+
+      resenaIndex = 0;
+      updateResenaCarousel();
+      resetResenaInterval();
+    }
+
+    function updateResenaCarousel() {
+      const track = document.getElementById("resenasTrack");
+      const dots = [...document.querySelectorAll(".resena-dot")];
+      const slides = [...document.querySelectorAll(".resena-slide")];
+      if (!track || slides.length === 0) return;
+
+      if (resenaIndex < 0) resenaIndex = slides.length - 1;
+      if (resenaIndex >= slides.length) resenaIndex = 0;
+
+      const offset = -resenaIndex * 100;
+      track.style.transform = `translateX(${offset}%)`;
+
+      dots.forEach((d, i) => {
+        d.classList.toggle("active", i === resenaIndex);
+      });
+    }
+
+    function goToResena(idx) {
+      resenaIndex = idx;
+      updateResenaCarousel();
+    }
+
+    function nextResena() {
+      resenaIndex++;
+      updateResenaCarousel();
+    }
+
+    function prevResena() {
+      resenaIndex--;
+      updateResenaCarousel();
+    }
+
+    function resetResenaInterval() {
+      if (resenaInterval) clearInterval(resenaInterval);
+      resenaInterval = setInterval(() => {
+        nextResena();
+      }, 5000);
+    }
+
+    async function cargarFraseApi() {
+      const textoEl = document.getElementById("apiTexto");
+      if (!textoEl) return;
+
+      textoEl.textContent = "Cargando frase viajera...";
+
+      try {
+        const resp = await fetch("https://api.quotable.io/random?tags=travel|happiness");
+        if (!resp.ok) throw new Error("Error en la respuesta");
+
+        const data = await resp.json();
+        textoEl.textContent = `"${data.content}" — ${data.author}`;
+      } catch (e) {
+        console.error(e);
+        textoEl.textContent = "No pudimos traer la frase en este momento. Intentá de nuevo más tarde.";
+      }
+    }
 
     // =======================================================
     // 2. NAVEGACIÓN Y FUNCIONES PRINCIPALES
@@ -1512,14 +1640,12 @@
     const pages = [...document.querySelectorAll('.pagina')];
     const volverBtnFicha = document.querySelector('#fichaEsencia .volver');
 
-    // Elementos de la ficha de esencia
     const fichaEsencia = document.getElementById('fichaEsencia');
     fichaEsencia.style.display = 'none';
     const fichaEsenciaNombre = document.getElementById('fichaEsenciaNombre');
     const fichaEsenciaCorta = document.getElementById('fichaEsenciaCorta');
     const fichaEsenciaDetalles = document.getElementById('fichaEsenciaDetalles');
 
-    // Elementos dinámicos del envase
     const envaseSelector = document.getElementById('envaseSelector');
     const envasePreviewImg = document.getElementById('fichaEsenciaImg');
     const envaseDesc = document.getElementById('envaseDesc');
@@ -1532,28 +1658,22 @@
     }
 
     function showSection(id) {
-      // Si es inicio → mostrar hero + secciones principales
       if (id === 'inicio') {
         pages.forEach(p => {
-          // Ocultamos siempre la ficha de compra
           if (p.id === 'fichaEsencia') {
             p.style.display = 'none';
             p.classList.remove('activa');
           }
-          // Mostramos el inicio y las secciones principales
-          else if (['inicio', 'quienes', 'colecciones', 'ocasiones', 'contacto'].includes(p.id)) {
+          else if (['inicio', 'resenas', 'quienes', 'colecciones', 'ediciones', 'contacto'].includes(p.id)) {
             p.style.display = 'block';
             p.classList.add('activa');
           }
-          // Cualquier otra cosa queda oculta
           else {
             p.style.display = 'none';
             p.classList.remove('activa');
           }
         });
-      }
-      else {
-        // Para el resto de secciones: mostrar solo la elegida
+      } else {
         pages.forEach(p => {
           if (p.id === id) {
             p.style.display = 'block';
@@ -1565,20 +1685,16 @@
         });
       }
 
-      // Cambiar fondo
       const target = document.getElementById(id);
       const image = target?.getAttribute('data-bg') || 'fondo.jpg';
       setBackground(image);
 
-      // Scroll al inicio
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      // Actualizar estado del menú
       document.querySelectorAll('.main-nav a').forEach(a => {
         a.classList.toggle('activa', a.getAttribute('data-nav') === id);
       });
     }
-
 
     // =======================================================
     // 3. LÓGICA DE DETALLE DE ESENCIA CON SELECTOR DE ENVASE
@@ -1593,10 +1709,12 @@
     }
 
     function handleEnvaseChange() {
-      updateEnvasePreview(envaseSelector.value);
-      // Cambiar el fondo de la página de ficha al envase actual
-      fichaEsencia.setAttribute('data-bg', ENVASES_DATA[envaseSelector.value].img);
-      setBackground(ENVASES_DATA[envaseSelector.value].img);
+      const key = envaseSelector.value;
+      const data = ENVASES_DATA[key];
+      if (!data) return;
+      updateEnvasePreview(key);
+      fichaEsencia.setAttribute('data-bg', data.img);
+      setBackground(data.img);
     }
 
     function initializeEnvaseSelector() {
@@ -1625,18 +1743,18 @@
             alert("Elegí un envase.");
             return;
           }
+
+          // Agregar producto al carrito
           agregarAlCarrito(nombreEsencia, envaseKey);
-          showSection('carrito'); // si no querés que navegue, borrá esta línea
+
+          // Mostrar mini modal
+          mostrarMiniCart(envaseKey, nombreEsencia);
         };
       }
 
-
-
-      // 1. Cargar Datos de la Esencia
       fichaEsenciaNombre.textContent = nombreEsencia;
       fichaEsenciaCorta.textContent = esencia.corta;
 
-      // 2. Cargar Detalles del Aroma
       fichaEsenciaDetalles.innerHTML = '';
       const detalles = esencia.detalles || [];
       if (detalles.length > 0) {
@@ -1649,7 +1767,6 @@
         fichaEsenciaDetalles.innerHTML = '<li>No hay detalles específicos de notas para este aroma.</li>';
       }
 
-      // 3. Inicializar Selector de Envase y mostrar el primero por defecto
       initializeEnvaseSelector();
       const defaultEnvaseKey = Object.keys(ENVASES_DATA)[0];
       if (defaultEnvaseKey) {
@@ -1657,12 +1774,10 @@
         updateEnvasePreview(defaultEnvaseKey);
       }
 
-      // 4. Actualizar botón "Volver"
-      const parentSection = (continente === 'ocasiones' || continente === 'navidad' || continente === 'verano') ? 'ocasiones' : continente;
+      const parentSection = (continente === 'ediciones' || continente === 'navidad' || continente === 'verano') ? 'ediciones' : continente;
       volverBtnFicha.setAttribute('data-nav', parentSection);
       volverBtnFicha.href = `#${parentSection}`;
 
-      // 5. Mostrar la sección, usando la imagen del envase por defecto para el fondo
       fichaEsencia.setAttribute('data-bg', ENVASES_DATA[defaultEnvaseKey].img);
       showSection('fichaEsencia');
     }
@@ -1671,7 +1786,49 @@
     // 4. INICIALIZACIÓN DE LISTENERS
     // =======================================================
     document.addEventListener('DOMContentLoaded', () => {
-      // (A) NavLinks (menú principal y botones 'volver')
+      const vaciar = document.getElementById("vaciarCarrito");
+      const finalizar = document.getElementById("finalizarCompra");
+      const pagoSection = document.getElementById("pagoSection");
+
+      const seguirComprandoBtn = document.getElementById("continuarcomprando");
+      if (seguirComprandoBtn) {
+        seguirComprandoBtn.addEventListener("click", () => {
+          // Lógica simple: siempre volver a Colecciones
+          showSection("colecciones");
+        });
+      }
+
+      // FIN NUEVO
+
+      if (vaciar) {
+        vaciar.addEventListener("click", () => {
+          if (confirm("¿Vaciar todo el carrito?")) {
+            CARRITO = [];
+            actualizarCarrito();
+            pagoSection.style.display = "none";
+          }
+        });
+      }
+
+      if (finalizar) {
+        finalizar.addEventListener("click", () => {
+          if (CARRITO.length === 0) {
+            alert("Tu carrito está vacío.");
+            return;
+          }
+          pagoSection.style.display = "block";
+          pagoSection.scrollIntoView({ behavior: "smooth" });
+        });
+      }
+
+      const logo = document.getElementById("logo");
+      if (logo) {
+        logo.addEventListener("click", () => {
+          showSection("inicio");
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
+
       const navLinks = [...document.querySelectorAll('[data-nav]')];
 
       navLinks.forEach(a => {
@@ -1682,7 +1839,6 @@
         });
       });
 
-      // (B) Cards de Continentes / Ocasiones (Nivel 1 -> Nivel 2)
       const continentCards = [...document.querySelectorAll('.card[data-goto]')];
       continentCards.forEach(card => {
         const clickHandler = (ev) => {
@@ -1696,7 +1852,6 @@
         });
       });
 
-      // (C) Tarjetas de esencia (Nivel 2 -> Ficha detalle)
       document.querySelectorAll('.card-simple').forEach(card => {
         const clickHandler = (ev) => {
           ev.preventDefault();
@@ -1710,7 +1865,6 @@
         });
       });
 
-      // (D) Lógica de Contacto (email/whatsapp)
       const form = document.getElementById('contactoForm');
       const campoEmail = document.getElementById('campoEmail');
       const campoWhats = document.getElementById('campoWhatsApp');
@@ -1772,10 +1926,105 @@
         msg.textContent = 'Enviando…';
       });
 
-      // (E) Estado inicial
-      showSection('inicio');
-    });
-  </script>
-</body>
+      // Reseñas: cargar y montar carrusel
+      cargarResenasDesdeStorage();
+      renderResenas();
 
+      // Botones carrusel
+      const btnPrev = document.getElementById("resPrev");
+      const btnNext = document.getElementById("resNext");
+      if (btnPrev) {
+        btnPrev.addEventListener("click", () => {
+          prevResena();
+          resetResenaInterval();
+        });
+      }
+      if (btnNext) {
+        btnNext.addEventListener("click", () => {
+          nextResena();
+          resetResenaInterval();
+        });
+      }
+
+            // Frase viajera desde la API: se carga siempre al entrar
+            cargarFraseApi();
+            showSection('inicio');
+      });  // 🟢 CORRECCIÓN: cierre del DOMContentLoaded
+
+
+      function confirmarPago() {
+        const medio = document.querySelector('input[name="medioPago"]:checked').value;
+        const total = document.getElementById("carritoTotal").textContent;
+        const pagoConfirmado = document.getElementById("pagoConfirmado");
+
+        pagoConfirmado.style.display = "block";
+        pagoConfirmado.innerHTML = `
+          <h4>✅ Pago confirmado</h4>
+          <p>Elegiste pagar con <strong>${medio.toUpperCase()}</strong> por un total de <strong>${total}</strong>.</p>
+          <p>Tu pedido está siendo procesado. ¡Gracias por elegir Aromas Bon Voyage!</p>
+        `;
+
+        setTimeout(() => {
+          CARRITO = [];
+          actualizarCarrito();
+          pagoConfirmado.style.display = "none";
+          document.getElementById("pagoSection").style.display = "none";
+          showSection("inicio");
+        }, 5000);
+      }
+
+      function mostrarMiniCart(envaseKey, esenciaNombre) {
+        const modal = document.getElementById("miniCartModal");
+        const img = document.getElementById("miniCartImg");
+        const nombre = document.getElementById("miniCartNombre");
+        const precio = document.getElementById("miniCartPrecio");
+        const cant = document.getElementById("miniCartCant");
+        const total = document.getElementById("miniCartTotal");
+
+        const envase = ENVASES_DATA[envaseKey];
+
+        img.src = envase.img;
+        nombre.textContent = `${esenciaNombre} (${envase.nombre})`;
+        precio.textContent = `$${envase.precio.toLocaleString("es-AR")}`;
+
+        cant.textContent = CARRITO.length;
+        const suma = CARRITO.reduce((acc, item) => acc + item.precio, 0);
+        total.textContent = `$${suma.toLocaleString("es-AR")}`;
+
+        modal.style.display = "block";
+
+        setTimeout(() => {
+          modal.style.display = "none";
+        }, 4500);
+      }
+
+      function cerrarMiniCart() {
+        document.getElementById("miniCartModal").style.display = "none";
+      }
+
+  </script>
+
+  <!-- ========== MODAL MINI-CARRITO ========== -->
+  <div id="miniCartModal" class="mini-cart-modal">
+    <div class="mini-cart-content">
+      <button class="mini-cart-close" onclick="cerrarMiniCart()">×</button>
+
+      <div class="mini-cart-item">
+        <img id="miniCartImg" src="" alt="Producto" />
+        <div class="mini-cart-textos">
+          <p id="miniCartNombre" class="mini-cart-nombre"></p>
+          <p id="miniCartPrecio" class="mini-cart-precio"></p>
+          <strong class="mini-cart-msg">¡Agregado al carrito!</strong>
+        </div>
+      </div>
+
+      <div class="mini-cart-total">
+        Total (<span id="miniCartCant"></span> productos):
+        <strong id="miniCartTotal"></strong>
+      </div>
+
+      <button class="btn btn-primary" onclick="showSection('carrito')">Ver carrito</button>
+    </div>
+  </div>
+</body>
 </html>
