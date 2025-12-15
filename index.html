@@ -65,6 +65,7 @@
           </div>
         <div class="resenas-dots" id="resenasDots">
         <!-- Puntitos dinámicos -->
+        </div>
       </section>
     </div>
 
@@ -976,13 +977,14 @@
     ];
 
     let RESENAS = [];
-
+    let ESENCIAS_API = {};
+  
     const ESENCIAS = {
       africa: {
         "Vainilla Madagascar y Cacao": {
           corta: "Fondo cálido, envolvente y cremoso con notas de cacao profundo.",
           larga: "Inspirada en la tierra africana, esta esencia combina la dulzura natural de la vainilla de Madagascar con el carácter amargo del cacao. Perfecta para espacios donde buscás calidez y elegancia.",
-          ingredientesImg: "assets/ingredientes/africa/vainilla-cacao.jpg",
+          ingredientesImg: "Aromas/África/3.jpg",
           detalles: ["Notas de Salida: Vainilla de Madagascar", "Notas de Corazón: Cacao Tostado", "Notas de Fondo: Caramelo"]
         },
         "Vainilla dulce, Ylang-Ylang y Café": {
@@ -1423,65 +1425,214 @@
       }
     };
 
+    async function cargarEsenciasApi() {
+      try {
+        const resp = await fetch("api_esencias.json");
+        if (!resp.ok) throw new Error("No se pudo cargar la API de esencias");
+
+        ESENCIAS_API = await resp.json();
+        console.log("API de esencias cargada:", ESENCIAS_API);
+
+        validarEsenciasApi();
+      } catch (error) {
+        console.error("Error cargando API:", error);
+      }
+    }
+
+    function validarEsenciasApi() {
+      Object.entries(ESENCIAS_API).forEach(([continente, lista]) => {
+        lista.forEach(nombre => {
+          if (!ESENCIAS[continente] || !ESENCIAS[continente][nombre]) {
+            console.warn(
+              `La esencia "${nombre}" del continente "${continente}" existe en la API pero NO en ESENCIAS`
+            );
+          }
+        });
+      });
+    }
+
+
+
     // =======================================================
     // 1. CARRITO DE COMPRAS
     // =======================================================
-    let CARRITO = [];
+      const CART_KEY = "carritoBonVoyage_v1";
 
-    function agregarAlCarrito(nombreEsencia, envaseKey) {
-      const envase = ENVASES_DATA[envaseKey];
-      if (!envase) {
-        alert("Seleccioná un envase válido.");
-        return;
+      // Estructura: [{ id, esencia, envaseKey, envaseNombre, precioUnit, img, qty }]
+      let CARRITO = [];
+
+      function makeCartId(esencia, envaseKey) {
+        return `${encodeURIComponent(esencia)}__${envaseKey}`;
       }
 
-      const item = {
-        esencia: nombreEsencia,
-        envase: envase.nombre,
-        precio: envase.precio,
-        img: envase.img
-      };
-
-      CARRITO.push(item);
-      actualizarCarrito();
-    }
-
-    function actualizarCarrito() {
-      const lista = document.getElementById("carritoLista");
-      const totalElem = document.getElementById("carritoTotal");
-      const countElem = document.getElementById("carritoCount");
-
-      if (!lista || !totalElem) return;
-
-      lista.innerHTML = "";
-      let total = 0;
-
-      CARRITO.forEach((item, i) => {
-        total += item.precio;
-        lista.innerHTML += `
-      <div class="item-carrito">
-        <img src="${item.img}" alt="${item.envase}">
-          <div>
-            <p><strong>${item.esencia}</strong></p>
-            <p>${item.envase}</p>
-            <p>$${item.precio.toLocaleString("es-AR")}</p>
-            <button onclick="eliminarDelCarrito(${i})">❌ Quitar</button>
-          </div>
-      </div>`;
-      });
-      totalElem.textContent = `$${total.toLocaleString("es-AR")}`;
-      if (countElem) {
-        countElem.textContent = CARRITO.length;
-        countElem.style.transform = "scale(1.3)";
-        setTimeout(() => (countElem.style.transform = "scale(1)"), 200);
+      function cargarCarrito() {
+        try {
+          const raw = localStorage.getItem(CART_KEY);
+          CARRITO = raw ? JSON.parse(raw) : [];
+        } catch (e) {
+          CARRITO = [];
+        }
       }
-    }
 
-    function eliminarDelCarrito(index) {
-      CARRITO.splice(index, 1);
-      actualizarCarrito();
-    }
+      function guardarCarrito() {
+        try {
+          localStorage.setItem(CART_KEY, JSON.stringify(CARRITO));
+        } catch (e) {
+          console.warn("No se pudo guardar el carrito en localStorage", e);
+        }
+      }
 
+      function getTotalQty() {
+        return CARRITO.reduce((acc, it) => acc + (Number(it.qty) || 0), 0);
+      }
+
+      function getTotalPrice() {
+        return CARRITO.reduce((acc, it) => acc + (Number(it.qty) || 0) * (Number(it.precioUnit) || 0), 0);
+      }
+
+      function agregarAlCarrito(nombreEsencia, envaseKey, qty = 1) {
+        const envase = ENVASES_DATA[envaseKey];
+        if (!envase) {
+          alert("Seleccioná un envase válido.");
+          return;
+        }
+
+        const id = makeCartId(nombreEsencia, envaseKey);
+        const existente = CARRITO.find(it => it.id === id);
+
+        if (existente) {
+          existente.qty = Math.min(99, (Number(existente.qty) || 0) + Number(qty));
+        } else {
+          CARRITO.push({
+            id,
+            esencia: nombreEsencia,
+            envaseKey,
+            envaseNombre: envase.nombre,
+            precioUnit: envase.precio,
+            img: envase.img,
+            qty: Math.min(99, Number(qty) || 1)
+          });
+        }
+
+        guardarCarrito();
+        actualizarCarrito();
+      }
+
+      function setQty(id, newQty) {
+        const item = CARRITO.find(it => it.id === id);
+        if (!item) return;
+
+        const q = Math.max(1, Math.min(99, Number(newQty) || 1));
+        item.qty = q;
+
+        guardarCarrito();
+        actualizarCarrito();
+      }
+
+      function incQty(id, delta) {
+        const item = CARRITO.find(it => it.id === id);
+        if (!item) return;
+
+        item.qty = Math.max(1, Math.min(99, (Number(item.qty) || 1) + delta));
+
+        guardarCarrito();
+        actualizarCarrito();
+      }
+
+      function eliminarDelCarrito(id) {
+        CARRITO = CARRITO.filter(it => it.id !== id);
+        guardarCarrito();
+        actualizarCarrito();
+      }
+
+      function vaciarCarrito() {
+        CARRITO = [];
+        guardarCarrito();
+        actualizarCarrito();
+      }
+
+
+      function actualizarCarrito() {
+        const lista = document.getElementById("carritoLista");
+        const totalElem = document.getElementById("carritoTotal");
+        const countElem = document.getElementById("carritoCount");
+
+        if (!lista || !totalElem) return;
+
+        if (CARRITO.length === 0) {
+          lista.innerHTML = `<p class="carrito-vacio">Tu carrito está vacío.</p>`;
+          totalElem.textContent = "$0";
+          if (countElem) countElem.textContent = "0";
+          return;
+        }
+
+        lista.innerHTML = "";
+
+        CARRITO.forEach((item) => {
+          const subtotal = (Number(item.qty) || 0) * (Number(item.precioUnit) || 0);
+
+          const row = document.createElement("div");
+          row.className = "item-carrito";
+          row.innerHTML = `
+            <img src="${item.img}" alt="${item.envaseNombre}">
+            <div class="item-carrito-info">
+              <p><strong>${item.esencia}</strong></p>
+              <p>${item.envaseNombre}</p>
+              <p>Precio unit.: $${item.precioUnit.toLocaleString("es-AR")}</p>
+
+              <div class="item-carrito-qty">
+                <button type="button" class="qty-btn" data-action="dec" data-id="${item.id}" aria-label="Restar">−</button>
+                <input type="number" min="1" max="99" value="${item.qty}" class="qty-input" data-action="set" data-id="${item.id}">
+                <button type="button" class="qty-btn" data-action="inc" data-id="${item.id}" aria-label="Sumar">+</button>
+              </div>
+
+              <p class="item-carrito-subtotal">
+                Subtotal: <strong>$${subtotal.toLocaleString("es-AR")}</strong>
+              </p>
+
+              <button type="button" class="btn-quitar" data-action="remove" data-id="${item.id}">❌ Quitar</button>
+            </div>
+          `;
+          lista.appendChild(row);
+        });
+
+        totalElem.textContent = `$${getTotalPrice().toLocaleString("es-AR")}`;
+
+        if (countElem) {
+          countElem.textContent = String(getTotalQty());
+          countElem.style.transform = "scale(1.3)";
+          setTimeout(() => (countElem.style.transform = "scale(1)"), 200);
+        }
+      }
+
+      // Delegación de eventos del carrito (evita onclick inline)
+      function bindCarritoEvents() {
+        const lista = document.getElementById("carritoLista");
+        if (!lista) return;
+
+        lista.addEventListener("click", (e) => {
+          const btn = e.target.closest("[data-action]");
+          if (!btn) return;
+
+          const action = btn.getAttribute("data-action");
+          const id = btn.getAttribute("data-id");
+          if (!id) return;
+
+          if (action === "inc") incQty(id, +1);
+          if (action === "dec") incQty(id, -1);
+          if (action === "remove") eliminarDelCarrito(id);
+        });
+
+        lista.addEventListener("change", (e) => {
+          const input = e.target.closest('input[data-action="set"]');
+          if (!input) return;
+          const id = input.getAttribute("data-id");
+          setQty(id, input.value);
+        });
+      }
+    </script>
+
+<script>
     //=========================================
     //  RESEÑAS – STORAGE Y CARRUSEL
     //=========================================
@@ -1612,24 +1763,41 @@
       if (resenaInterval) clearInterval(resenaInterval);
       resenaInterval = setInterval(() => {
         nextResena();
-      }, 5000);
+      }, 8000);
     }
 
-    async function cargarFraseApi() {
-      const textoEl = document.getElementById("apiTexto");
-      if (!textoEl) return;
+    let FRASES = [];
+    let fraseInterval = null;
+    let lastIndex = -1;
 
-      textoEl.textContent = "Cargando frase viajera...";
+    async function cargarFrasesJson() {
+      const el = document.getElementById("apiTexto");
+
+      if (!el) {
+        console.error("No existe #apiTexto en el DOM");
+        return;
+      }
 
       try {
-        const resp = await fetch("https://api.quotable.io/random?tags=travel|happiness");
-        if (!resp.ok) throw new Error("Error en la respuesta");
+        const resp = await fetch("./frases.json");
+        if (!resp.ok) throw new Error("No se pudo cargar frases.json");
 
         const data = await resp.json();
-        textoEl.textContent = `"${data.content}" — ${data.author}`;
-      } catch (e) {
-        console.error(e);
-        textoEl.textContent = "No pudimos traer la frase en este momento. Intentá de nuevo más tarde.";
+
+        if (!data.frases || data.frases.length === 0) {
+          el.textContent = "No hay frases disponibles.";
+          return;
+        }
+
+        const fraseRandom =
+          data.frases[Math.floor(Math.random() * data.frases.length)];
+
+        el.textContent = fraseRandom;
+
+        console.log("✅ Frase cargada:", fraseRandom);
+      } catch (error) {
+        console.error("Error:", error);
+        el.textContent = "Error cargando frases.";
       }
     }
 
@@ -1639,6 +1807,7 @@
     const bg = document.getElementById('bg');
     const pages = [...document.querySelectorAll('.pagina')];
     const volverBtnFicha = document.querySelector('#fichaEsencia .volver');
+    let currentEsenciaBg = null;   // fondo actual de la ficha de esencia
 
     const fichaEsencia = document.getElementById('fichaEsencia');
     fichaEsencia.style.display = 'none';
@@ -1664,7 +1833,7 @@
             p.style.display = 'none';
             p.classList.remove('activa');
           }
-          else if (['inicio', 'resenas', 'quienes', 'colecciones', 'ediciones', 'contacto'].includes(p.id)) {
+          else if (['inicio','quienes','colecciones','ediciones','contacto'].includes(p.id)) {
             p.style.display = 'block';
             p.classList.add('activa');
           }
@@ -1685,12 +1854,20 @@
         });
       }
 
-      const target = document.getElementById(id);
-      const image = target?.getAttribute('data-bg') || 'fondo.jpg';
+      // ===== Fondo =====
+      let image;
+      if (id === 'fichaEsencia' && currentEsenciaBg) {
+        image = currentEsenciaBg;
+      } else {
+        const target = document.getElementById(id);
+        image = target?.getAttribute('data-bg') || 'fondo.jpg';
+      }
       setBackground(image);
 
+      // ===== Scroll =====
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
+      // ===== Nav activa =====
       document.querySelectorAll('.main-nav a').forEach(a => {
         a.classList.toggle('activa', a.getAttribute('data-nav') === id);
       });
@@ -1704,18 +1881,21 @@
       if (!data) return;
       envasePreviewImg.src = data.img;
       envasePreviewImg.alt = data.nombre;
-      envasePrecio.textContent = `$${data.precio.toLocaleString('es-ES')}`;
+      envasePrecio.textContent = `$${data.precio.toLocaleString('es-AR')}`;
       envaseDesc.textContent = data.desc;
     }
 
     function handleEnvaseChange() {
-      const key = envaseSelector.value;
+     const key = envaseSelector.value;
       const data = ENVASES_DATA[key];
       if (!data) return;
+
+      // Solo cambiamos la foto del envase
       updateEnvasePreview(key);
-      fichaEsencia.setAttribute('data-bg', data.img);
-      setBackground(data.img);
+      // No tocamos fichaEsencia.setAttribute('data-bg', ...)
+      // No llamamos a setBackground aquí
     }
+
 
     function initializeEnvaseSelector() {
       envaseSelector.innerHTML = '';
@@ -1774,18 +1954,29 @@
         updateEnvasePreview(defaultEnvaseKey);
       }
 
-      const parentSection = (continente === 'ediciones' || continente === 'navidad' || continente === 'verano') ? 'ediciones' : continente;
-      volverBtnFicha.setAttribute('data-nav', parentSection);
-      volverBtnFicha.href = `#${parentSection}`;
+        const parentSection = 
+          (continente === 'ediciones' || continente === 'navidad' || continente === 'verano')
+            ? 'ediciones'
+            : continente;
 
-      fichaEsencia.setAttribute('data-bg', ENVASES_DATA[defaultEnvaseKey].img);
-      showSection('fichaEsencia');
-    }
+        volverBtnFicha.setAttribute('data-nav', parentSection);
+        volverBtnFicha.href = `#${parentSection}`;
 
+        // Guardamos el fondo de la esencia para la ficha
+        currentEsenciaBg = esencia.ingredientesImg || ENVASES_DATA[defaultEnvaseKey].img;
+
+        // Mostramos la ficha; showSection usará currentEsenciaBg
+        showSection('fichaEsencia');
+        envaseSelector.focus();
+      }
     // =======================================================
     // 4. INICIALIZACIÓN DE LISTENERS
     // =======================================================
     document.addEventListener('DOMContentLoaded', () => {
+      cargarEsenciasApi();
+      cargarCarrito();
+      actualizarCarrito();
+      bindCarritoEvents();
       const vaciar = document.getElementById("vaciarCarrito");
       const finalizar = document.getElementById("finalizarCompra");
       const pagoSection = document.getElementById("pagoSection");
@@ -1947,8 +2138,8 @@
       }
 
             // Frase viajera desde la API: se carga siempre al entrar
-            cargarFraseApi();
             showSection('inicio');
+            cargarFrasesJson();
       });  // 🟢 CORRECCIÓN: cierre del DOMContentLoaded
 
 
@@ -1987,8 +2178,8 @@
         nombre.textContent = `${esenciaNombre} (${envase.nombre})`;
         precio.textContent = `$${envase.precio.toLocaleString("es-AR")}`;
 
-        cant.textContent = CARRITO.length;
-        const suma = CARRITO.reduce((acc, item) => acc + item.precio, 0);
+        cant.textContent = getTotalQty();
+        const suma = getTotalPrice();
         total.textContent = `$${suma.toLocaleString("es-AR")}`;
 
         modal.style.display = "block";
