@@ -1139,19 +1139,17 @@ fieldset.preferencia input[type="radio"] {
 }
 
 .resenas-track {
-  display: flex;
-  transition: transform 0.5s ease;
-  will-change: transform;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 1rem;
+  transform: none !important; /* desactiva el movimiento del carrusel si lo usabas */
 }
 
-/* Cada slide */
-.resena-slide {
-  flex: 0 0 100%;
-  padding: 0.4rem;
-}
-
-.resenas-card {
-  background: #ffffff;
+/* Mobile: 1 columna */
+@media (max-width: 768px){
+  .resenas-track{
+    grid-template-columns: 1fr;
+  }
 }
 
 .resena-card {
