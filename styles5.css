@@ -1104,8 +1104,16 @@ fieldset.preferencia input[type="radio"] {
   position: relative;
   z-index: 2;
 }
+.resena-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
 
-  .resenas-home {
+
+.resenas-home {
   background: #ffffff;            /* Fondo blanco */
   border-radius: 20px;
   padding: 3rem 3rem;
@@ -1135,27 +1143,28 @@ fieldset.preferencia input[type="radio"] {
 
 .resenas-ventana {
   overflow: hidden;
-  flex: 1;
+  width: 100%;
 }
 
 .resenas-track {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(240px, 1fr));
-  gap: 1rem;
-  transform: none !important; /* desactiva el movimiento del carrusel si lo usabas */
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
 }
 
 /* Mobile: 1 columna */
 @media (max-width: 768px){
-  .resenas-track{
-    grid-template-columns: 1fr;
+  .resena-card {
+    min-width: 100%;
   }
 }
 
 .resena-card {
-  background: #ffffff !important;
-  border-radius: 20px;
+  min-width: calc(100% / 3);
+  box-sizing: border-box;
   padding: 2rem 1.8rem;
+  background: #ffffff;
+  border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.12);
 }
 
