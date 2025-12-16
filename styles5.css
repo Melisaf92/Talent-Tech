@@ -992,11 +992,14 @@ fieldset.preferencia input[type="radio"] {
  * 13. RESPONSIVE
  * ----------------------------------------
  */
-@media (max-width: 768px) {
-  .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.8rem 1rem;
+  @media (max-width: 768px) {
+    .social-fixed {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      bottom: calc(12px + env(safe-area-inset-bottom));
+      flex-direction: row;
+      gap: 14px;
   }
 
   .site-header.scrolled {
@@ -1463,3 +1466,4 @@ fieldset.preferencia input[type="radio"] {
   transform: scale(1.08);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
 }
+
